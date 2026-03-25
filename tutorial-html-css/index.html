@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial HTML5 + CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Tutorial de Desarrollo Web</h1>
+        <nav>
+            <ul>
+                <li><a href="#html">HTML5</a></li>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="html">
+            <h2>Introducción a HTML5</h2>
+            <p>HTML5 es la última versión del lenguaje de marcado de hipertexto utilizado para estructurar y presentar contenido en la web.</p>
+
+            <article>
+                <h3>Elementos semánticos</h3>
+                <p>HTML5 introduce elementos semánticos que describen su significado tanto al navegador como al desarrollador:</p>
+                <ul>
+                    <li><code>&lt;header&gt;</code> – Cabecera de la página o sección</li>
+                    <li><code>&lt;nav&gt;</code> – Bloque de navegación</li>
+                    <li><code>&lt;main&gt;</code> – Contenido principal</li>
+                    <li><code>&lt;section&gt;</code> – Sección de contenido</li>
+                    <li><code>&lt;article&gt;</code> – Contenido independiente</li>
+                    <li><code>&lt;footer&gt;</code> – Pie de página</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Formulario de ejemplo</h3>
+                <form>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </article>
+        </section>
+
+        <section id="css">
+            <h2>Introducción a CSS</h2>
+            <p>CSS (Cascading Style Sheets) controla la apariencia visual de los elementos HTML.</p>
+
+            <article>
+                <h3>Conceptos básicos</h3>
+                <div class="demo-box">
+                    <div class="box box-1">Caja 1 – Color de fondo</div>
+                    <div class="box box-2">Caja 2 – Bordes redondeados</div>
+                    <div class="box box-3">Caja 3 – Sombra</div>
+                </div>
+            </article>
+
+            <article>
+                <h3>Flexbox</h3>
+                <div class="flex-container">
+                    <div class="flex-item">Elemento 1</div>
+                    <div class="flex-item">Elemento 2</div>
+                    <div class="flex-item">Elemento 3</div>
+                </div>
+            </article>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Este proyecto fue desarrollado como parte del curso de <strong>Desarrollo de Aplicaciones Web</strong>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Desarrollo de Aplicaciones Web – Tutorial HTML5 + CSS</p>
+    </footer>
+
+</body>
+</html>
