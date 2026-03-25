@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="css/estiloSsart.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS Animacion</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="tutorialIndice.html">Inicio</a></li>
+            <li><a href="tutorialBordes.html">Bordes</a></li>
+            <li><a href="tutorialSombras.html">Sombras</a></li>
+            <li><a href="tutorialImagenes.html">Imagenes</a></li>
+            <li><a href="tutorialPosicionamiento.html">Posicion</a></li>
+            <li><a href="tutorialTransformacion.html">Transformacion</a></li>
+            <li><a href="tutorialFormularios.html">Formularios</a></li>
+            <li><a href="tutorialMarcoIntegrado.html">iframe</a></li>
+            <li><a href="tutorialTransiciones.html">Transiciones</a></li>
+            <li><a href="tutorialColumnas.html">Columnas</a></li>
+            <li><a href="tutorialVideo.html">Video</a></li>
+            <li><a href="tutorialAudio.html">Audio</a></li>
+            <li><a href="tutorialTransparencias.html">Transparencias</a></li>
+            <li><a href="tutorialAnimacion.html">Animacion</a></li>
+            <li><a href="tutorialGraficosVectoriales.html">SVG</a></li>
+            <li><a href="tutorialContenidoEditable.html">Contenido editable</a></li>
+            <li><a href="tutorialAlmacenamiento.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Animation</h2>
+        <article>
+            <p>Las animaciones con keyframes describen cambios graduales de posicion o apariencia, utiles para enfatizar acciones y guiar atencion del usuario.</p>
+            <p>Situa el cursor encima del martillo para ver la animacion.</p>
+            <div id="tutorial_ejemplo_animacion">
+                <svg width="120" height="190" xmlns="http://www.w3.org/2000/svg" )>
+                    <rect x="43" y="10" width="14" height="160" rx="6" ry="5" fill="#895111" />
+                    <rect x="43" y="10" width="14" height="160" rx="6" ry="5" fill="#895111" />
+                    <rect x="45" y="15" width="4" height="150" rx="6" ry="6" fill="#A68661" />
+                    <rect x="10" y="22" width="80" height="45" rx="14" ry="12" fill="#6E6E5F" />
+                    <rect x="20" y="37" width="62" height="24" rx="6" ry="6" fill="#898982" />
+                    <rect x="20" y="25" width="62" height="6" rx="4" ry="4" fill="#C2C2B6" />
+                    <rect x="43" y="67" width="14" height="9" fill="#482907" />
+                </svg>
+            </div>
+        </article>
+        <article>
+            <h2>Paso a paso</h2>
+            <h4 id="tutorial_subtitulo">1. Creamos el objeto a animar</h4>
+            <p>Las animaciones con keyframes describen cambios graduales de posicion o apariencia, utiles para enfatizar acciones y guiar atencion del usuario.</p>
+            <div id="tutorial_panel_ejemplo">
+                <pre>
+            < div id="tutorial_objeto_transformacion_base">
+                < svg width="120" height="190" xmlns="http://www.w3.org/2000/svg" )>
+                    < rect x="43" y="10" width="14" height="160" rx="6" ry="5" fill="#895111" />
+                    < rect x="43" y="10" width="14" height="160" rx="6" ry="5" fill="#895111" />
+                    < rect x="45" y="15" width="4" height="150" rx="6" ry="6" fill="#A68661" />
+                    < rect x="10" y="22" width="80" height="45" rx="14" ry="12" fill="#6E6E5F" />
+                    < rect x="20" y="37" width="62" height="24" rx="6" ry="6" fill="#898982" />
+                    < rect x="20" y="25" width="62" height="6" rx="4" ry="4" fill="#C2C2B6" />
+                    < rect x="43" y="67" width="14" height="9" fill="#482907" />
+                < /svg>
+            < /div>
+                        </pre>
+            </div>
+            <h4 id="tutorial_subtitulo">2. Establecemos la animacion</h4>
+            <p>Seguidamente, en el codigo CSS, vamos a incluir dos cosas.
+                Por una parte, en el selector del
+            <div> donde esta el martillo, indicamos que animacion tendra que reproducir, indicando un nombre y la
+                duracion de la animacion expresada en segundos (entre otras propiedades opcionales que a continuacion
+                veremos).</p>
+                <div id="tutorial_bloque_codigo">
+                    <pre>
+                    #tutorial_objeto_transformacion_base {
+                    animation:animacion_martillo 2s;
+                    }
+                    </pre>
+                </div>
+                <p>
+                    El nombre de la animacion (animacion_martillo) y la duracion (2s) son valores obligatorios, pero
+                    existen valores opcionales que nos permiten personalizar la animacion, como son:</p>
+                <div>
+                    <ul>
+                        <b>animation-timing-function </b>: Define el tipo de (easing) aceleracion que tendra la
+                        animacion.<br>
+                        <ul>
+                            <b>linear</b>: la velocidad es siempre la misma durante toda la animacion.<br>
+                            <b>ease</b>: la animacion comienza lenta, despues rapida y acaba lento.<br>
+                            <b>ease-in</b>: (aceleracion) la animacion empieza lenta y va acelerandose
+                            progresivamente.<br>
+                            <b>ease-out</b>: (deceleracion) la animacion empieza rapida y va decelerando
+                            progresivamente.<br>
+                            <b>ease-in-out</b>: la animacion empieza y acaba lenta y en el recorrido central va
+                            rapida.<br>
+                        </ul><br>
+                </div>
+                <div>
+                    <b>animation-iteration-count</b>: Indica el numero de veces que se repetira la animacion.
+                    <ul>
+                        <b>infinite</b>: la animacion se repite indefinidamente.<br>
+                        <b>numero de repeticiones</b>: se repite el numero de veces indicado (por defecto es 1).<br>
+                    </ul><br>
+                </div>
+                <div>
+                    <b>animation-direction</b>: Establece la direccion de la animacion.
+                    <ul>
+                        <b>normal</b>: la animacion se reproduce siempre tal y como la hemos definido.<br>
+                        <b>alternate</b>: primero se reproduce en la direccion definida y posteriormente al reves (y asi
+                        sucesivamente).<br>
+                    </ul><br>
+                </div>
+                <div>
+
+                    <b>animation-delay</b>: Indica si existe retardo (o tiempo de espera) para que se inicie la
+                    animacion.
+                    <ul>
+                        <b>numero de segundos de espera</b>: El numero de segundos seguido de "s".<br>
+                    </ul>
+                    <br>
+                </div>
+                <div>
+                    <b>animation-fill-mode</b>: Indica como se quedara el elemento que realiza la animacion cuando esta
+                    finalice.
+                    <ul>
+                        <b>none</b>: Al acabar la animacion se aplicaran los estilos CSS normales que tenga el propio
+                        elemento animado.<br>
+                        <b>forwards</b>: Cuando acabe la animacion, el elemento se quedara tal y como acabo la animacion
+                        (especificadas en el 100%).<br>
+                        <b>backwards </b>: Al finalizar la animacion, el elemento animado se quedara con las propiedades
+                        con las que empezo la animacion (especificadas en el 0%).<br>
+                    </ul>
+                    </ul>
+                </div>
+                <p>
+                    Asi, el ejemplo anterior podria estar complementado por estas propiedades:<br>
+                    (Se podria escribir todo seguido, pero debido al numero de valores y al orden existente para
+                    definirlos, posiblemente es mas sencillo ir indicando las propiedades opcionales por separado):</p>
+                <div id="tutorial_bloque_codigo">
+                    <pre>
+                    #tutorial_objeto_transformacion_base {
+                    animation:animacion_martillo 2s;
+                    animation-timing-function: ease-out;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                    animation-delay: 1s;
+                    }
+                    </pre>
+                </div>
+                <h4 id="tutorial_subtitulo">3. Definimos como sera la animacion</h4>
+                <p>Igualmente, dentro del mismo codigo CSS, definimos en que consistira dicha animacion, indicando el
+                    nombre 'animacion_martillo', que hemos creado en el paso anterior.</p>
+                <div id="tutorial_bloque_codigo">
+                    <pre>
+                    @keyframes animacion_martillo {
+                    0% {
+                    transform: rotate(0deg);
+                    }
+                    50% {
+                    transform: rotate(90deg);
+                    }
+                    100% {
+                    transform: rotate(0deg);
+                    }
+                    }
+                    </pre>
+                </div>
+                <p> Toda la animacion se puede dividir en tantos pasos como sea necesario, aunque lo minimo son 2:
+                    inicio (0%) y final (100%).</p>
+                <p>En este ejemplo se han incluido 3 pasos. En el inicio de la animacion (0%) se empieza con una
+                    rotacion del < div> martillo de 0 grados (0deg), en la mitad de la animacion (50%), el < div>
+                    martillo tendra una rotacion de 90 grados (rotara hacia la derecha) y cuando la animacion finalice (100%), el
+                    martillo volvera a su rotacion inicial.
+                </p>
+
+                <div id="tutorial_objeto_animado">
+                <svg width="120" height="190" xmlns="http://www.w3.org/2000/svg" )>
+                    <rect x="43" y="10" width="14" height="160" rx="6" ry="5" fill="#895111" />
+                    <rect x="43" y="10" width="14" height="160" rx="6" ry="5" fill="#895111" />
+                    <rect x="45" y="15" width="4" height="150" rx="6" ry="6" fill="#A68661" />
+                    <rect x="10" y="22" width="80" height="45" rx="14" ry="12" fill="#6E6E5F" />
+                    <rect x="20" y="37" width="62" height="24" rx="6" ry="6" fill="#898982" />
+                    <rect x="20" y="25" width="62" height="6" rx="4" ry="4" fill="#C2C2B6" />
+                    <rect x="43" y="67" width="14" height="9" fill="#482907" />
+                </svg>
+            </div>
+        </article>
+    </section>
+<footer>
+        <div><br>&#169; Saul Stiven Garcia Olivar (2026)<br>
+            <img src="imagenes/email.png" align="center"> saulgarcia@unimayor.edu.co</a>
+        </div>
+        Tutorial HTML5 + CSS / Desarrollo Software /Desarrollo de Aplicaciones Web</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

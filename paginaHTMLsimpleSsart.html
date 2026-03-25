@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina HTML Simple Ssart</title>
+    <style>
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            margin: 0;
+            padding: 18px;
+            line-height: 1.6;
+            color: #1f2c35;
+            background: linear-gradient(160deg, #f7efe4, #edf5fa);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            color: #154a60;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #d7e1e8;
+        }
+
+        table {
+            width: 100%;
+            max-width: 980px;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            border: 1px solid #d6e0e8;
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #edf6fb;
+        }
+
+        .ssart-plus {
+            background: #fff;
+            border: 1px solid #d9e1e8;
+            border-radius: 12px;
+            padding: 14px;
+            margin-top: 16px;
+            max-width: 980px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+
+<body bgcolor="#B5B8C9">
+    <marquee behavior="alternate" scrollamount="2" bgcolor="#A8ACBD">
+        <h1><i>ARQUITECTURA WEB Y FRONTEND</i></h1>
+    </marquee>
+
+    <p>Esta pagina presenta una vision clara de arquitectura web y desarrollo frontend para comprender como se construye una aplicacion moderna desde la base.</p>
+    <img src="Arqweb.jpg" alt="Arquitectura Web" width="400" height="200">
+
+    <h2>Que es la arquitectura web</h2>
+    <p>La arquitectura web define como se coordinan clientes, servicios, servidor y base de datos para responder de forma eficiente y segura a cada solicitud.
+        Permite que el navegador del usuario se comunique con servidores y bases de datos.</p>
+
+    <h3>Componentes de la arquitectura web</h3>
+    <ul>
+        <li><b>Cliente:</b> navegador del usuario que solicita informacion al servidor.</li>
+        <li><b>Servidor:</b> maquina que procesa solicitudes y envia respuestas.</li>
+        <li><b>Base de datos:</b> lugar donde se almacenan los datos de la aplicacion.</li>
+    </ul>
+
+    <h4><i>Tabla de ventajas y desventajas</i></h4>
+    <table border="1" cellpadding="10" cellspacing="0" width="70%">
+        <tr>
+            <th>Caracteristicas</th>
+            <th>Ventajas</th>
+            <th>Desventajas</th>
+        </tr>
+        <tr>
+            <th>Acceso y usabilidad</th>
+            <td>Acceso desde navegador y dispositivo sin instalacion.</td>
+            <td>Dependencia de conexion a internet.</td>
+        </tr>
+        <tr>
+            <th>Escalabilidad y rendimiento</th>
+            <td>Posibilidad de escalar para manejar mayor trafico.</td>
+            <td>Puede degradarse si hay sobrecarga de servidor.</td>
+        </tr>
+        <tr>
+            <th>Seguridad</th>
+            <td>Actualizaciones centralizadas.</td>
+            <td>Mayor exposicion a ataques si no se protege bien.</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <img src="frontend.webp" alt="Desarrollo Frontend" width="400" height="200">
+    <h2>Que es el desarrollo frontend</h2>
+    <p>El frontend se enfoca en disenar e implementar la interfaz con la que interactua el usuario, priorizando usabilidad, claridad y adaptacion a distintos dispositivos.
+        Es lo que el usuario ve e interactua al navegar por internet.</p>
+
+    <h3>Tecnologias del desarrollo frontend</h3>
+    <ol>
+        <li><b>HTML:</b> estructura del contenido.</li>
+        <li><b>CSS:</b> estilos y diseno visual.</li>
+        <li><b>JavaScript:</b> interactividad y comportamiento dinamico.</li>
+    </ol>
+
+    <h4><i>Tabla de ventajas y desventajas frontend</i></h4>
+    <table border="1" cellpadding="8" cellspacing="0" width="70%">
+        <tr>
+            <th>Caracteristicas</th>
+            <th>Ventajas</th>
+            <th>Desventajas</th>
+        </tr>
+        <tr>
+            <th>Desarrollo y UX</th>
+            <td>Resultados visuales inmediatos y enfocados en experiencia.</td>
+            <td>Mantenimiento continuo y actualizaciones frecuentes.</td>
+        </tr>
+        <tr>
+            <th>Interaccion</th>
+            <td>Curva de aprendizaje inicial amigable.</td>
+            <td>Cambios tecnologicos muy rapidos.</td>
+        </tr>
+        <tr>
+            <th>Diseno y plataforma</th>
+            <td>Facil crear interfaces responsivas para movil y escritorio.</td>
+            <td>Retos de compatibilidad entre navegadores.</td>
+        </tr>
+    </table>
+
+    <div class="ssart-plus">
+        <h3>Ampliacion Ssart: flujo de una peticion web</h3>
+        <ol>
+            <li>Usuario abre una URL en el navegador.</li>
+            <li>Navegador envia solicitud HTTP al servidor.</li>
+            <li>Backend procesa reglas y consulta base de datos.</li>
+            <li>Servidor responde con HTML, CSS, JS y datos.</li>
+            <li>Frontend renderiza la interfaz para el usuario final.</li>
+        </ol>
+        <h4>Buenas practicas extra</h4>
+        <ul>
+            <li>Separar estructura, estilos y logica.</li>
+            <li>Usar etiquetas semanticas para accesibilidad.</li>
+            <li>Aplicar diseno responsive desde etapas iniciales.</li>
+        </ul>
+    </div>
+
+    <hr>
+    <h5>Mas informacion</h5>
+    <ul>
+        <li><a href="https://developer.mozilla.org/es/docs/Web/HTML">Aprender HTML</a></li>
+        <li><a href="https://www.w3schools.com">Tutoriales de programacion</a></li>
+    </ul>
+</body>
+
+</html>
+

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="css/estiloSsart.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS TransiciA³n</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="tutorialIndice.html">Inicio</a></li>
+            <li><a href="tutorialBordes.html">Bordes</a></li>
+            <li><a href="tutorialSombras.html">Sombras</a></li>
+            <li><a href="tutorialImagenes.html">Imagenes</a></li>
+            <li><a href="tutorialPosicionamiento.html">Posicion</a></li>
+            <li><a href="tutorialTransformacion.html">Transformacion</a></li>
+            <li><a href="tutorialFormularios.html">Formularios</a></li>
+            <li><a href="tutorialMarcoIntegrado.html">iframe</a></li>
+            <li><a href="tutorialTransiciones.html">Transiciones</a></li>
+            <li><a href="tutorialColumnas.html">Columnas</a></li>
+            <li><a href="tutorialVideo.html">Video</a></li>
+            <li><a href="tutorialAudio.html">Audio</a></li>
+            <li><a href="tutorialTransparencias.html">Transparencias</a></li>
+            <li><a href="tutorialAnimacion.html">Animacion</a></li>
+            <li><a href="tutorialGraficosVectoriales.html">SVG</a></li>
+            <li><a href="tutorialContenidoEditable.html">Contenido editable</a></li>
+            <li><a href="tutorialAlmacenamiento.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Transiciones</h2>
+        <article>
+            <p>Las transiciones suavizan los cambios de estado en elementos interactivos y ayudan a comunicar respuesta visual con mayor naturalidad.</p>
+            <p>Para poder observar su funcionamiento vamos a utilizar un < div> llamado 'martillo' que contiene el
+                    dibujo de un martillo</p>
+            <div class="tutorial_contenedor_principal">
+                <img src="imagenes/martillo.png" alt="transformacion" width="80px">
+                <div class="tutorial_caja_descriptiva">
+                    <p>A este < div> le vamos a aplicar varias transiciones (de posiciA³n, tamaA±o y rotaciA³n) y para que
+                            podamos activar cada una de ellas en el momento que queramos deberA¡s pasar el cursor por
+                            encima de
+                            cada ejemplo. Es muy importante tener en cuenta que para que 'transition' funcione en todos
+                            los navegadores deberemos repetir la propiedad anteponiendo los prefijos de cada uno de los
+                            navegadores:<br>
+                            <b>-webkit-</b> (para Chrome y Safari)<br>
+                            <b>-moz-</b> (para Firefox).<br>
+                            <b>-o-</b> (para Opera)<br>
+                            <b>-ms-</b> (para versiones modernas de Internet Explorer).
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <h2>TransiciA³n con una Aºnica propiedad</h2>
+            <p>Las transiciones suavizan los cambios de estado en elementos interactivos y ayudan a comunicar respuesta visual con mayor naturalidad.</p>
+            <div id="tutorial_bloque_codigo">
+                #tutorial_objeto_transformacion_base{<br>
+                transition:left 1.5s;<br>
+                }<br><br>
+
+                #tutorial_objeto_transformacion_base:hover{<br>
+                position:relative;<br>
+                left:400px;<br>
+                }
+            </div>
+            <div >
+                <img src="imagenes/martillo.png" alt="transformacion" width="80px" id="tutorial_objeto_transicion_simple">
+            </div>
+        </article>
+        <article>
+            <h2>TransiciA³n con mAºltiples propiedades</h2>
+            <p>Las transiciones suavizan los cambios de estado en elementos interactivos y ayudan a comunicar respuesta visual con mayor naturalidad.</p>
+            <p>AsA­, en este ejemplo, al pasar el cursor por encima, se producirA¡n 6 cambios de propiedades al mismo
+                tiempo:</p>
+            <p>-El < div> martillo se moverA¡ 400px hacia la derecha (utilizando 'left') en 1.5 segundos.<br>
+                    -El color de fondo ('background-color') del < div> martillo se convertirA¡ en negro en 2
+                        segundos.<br>
+                        -La anchura del < div> se modificarA¡ hasta llegar a los 225 pA­xeles en 1 segundo.<br>
+                            -La altura del < div> se modificarA¡ hasta llegar a los 200 pA­xeles (empujando hacia abajo el
+                                contenido que le sigue) durante 1 segundo.<br>
+                                -El espacio que hay entre el extremo izquierdo del < div> y el dibujo que A©ste contiene
+                                    ('padding-left') se expandirA¡ hasta llegar a los 100 pixeles en 1 segundo.<br>
+                                    -El espacio que hay entre el extremo superior del < div> y el dibujo que A©ste
+                                        contiene ('padding-top') se expandirA¡ hasta llegar a los 20 pixeles en 1
+                                        segundo.</p>
+            <div id="tutorial_bloque_codigo">
+                #tutorial_objeto_transformacion_base{<br>
+                background-color:orange;<br>
+                width:100px;<br>
+                height:175px;<br>
+                transition:left 1.5s, background-color 2s, width 1s, height 1s, padding-left 1s, padding-top 1s;<br>
+                }<br><br>
+
+                #tutorial_objeto_transformacion_base:hover{<br>
+                position:relative;<br>
+                left:400px;<br>
+                background-color:black<br>
+                width:225px;<br>
+                height:200px;<br>
+                padding-left:100px;<br>
+                padding-top:20px;<br>
+                }
+            </div>
+            <img src="imagenes/martillo.png" alt="transformacion" width="80px" id="tutorial_objeto_transicion_multiple">
+
+            <p>En el primer selector (#tutorial_objeto_transformacion_base) se especifican los valores iniciales (color de fondo
+                'background-color', anchura 'width' y altura 'height'), los que no se definan (como 'padding-left' y
+                'padding-top') se tomarA¡n los valores por defecto.</p>
+
+        </article>
+        <article>
+            <h2>Las palabras mA¡gicas</h2>
+            <p>Las transiciones suavizan los cambios de estado en elementos interactivos y ayudan a comunicar respuesta visual con mayor naturalidad.</p>
+            <p>AdemA¡s, como todavia es necesario repetir el cA³digo anteponiendo los prefijos -webkit-, -moz-, -op- y
+                -ms- (para asegurar la compatibilidad con todos los navegadores), es interesante poder especificar todos
+                estos parA¡metros en una sola lA­nea.</p>
+            <div id="tutorial_bloque_codigo">
+                transition:[propiedad a modificar] [DuraciA³n en segundos] [Tipo de animaciA³n] [Retardo];<br>
+                transition: width 2s ease-out, 0.5s;
+            </div>
+            <h4 id="tutorial_subtitulo">[Propiedades a modificar]:</h4>
+            <p>En los ejemplos anteriores hemos utilizado unas cuantas propiedades, pero se pueden utilizar muchA¡s mA¡s,
+                como:</p>
+            <div id="tutorial_columnas_texto">
+                <li>all (selecciona todas)</li>
+                <li>background-colo</li>
+                <li>border</li>
+                <li>border-radius</li>
+                <li>color</li>
+                <li>top</li>
+                <li>bottom</li>
+                <li>left</li>
+                <li>right</li>
+                <li>box-shadow</li>
+                <li>width</li>
+                <li>height</li>
+                <li>line-height</li>
+                <li>margin</li>
+                <li>opacity</li>
+                <li>word-spacing</li>
+                <li>letter-spacing</li>
+                <li>fill</li>
+                <li>padding</li>
+                <li>stroke</li>
+                <li>text-shadow</li>
+                <li>vertical-align</li>
+                <li>visibility</li>
+                <li>z-index</li>
+            </div><br>
+            <h4 id="tutorial_subtitulo">[DuraciA³n en segundos]:</h4>
+            <p>Se debe especificar el nAºmero de segundos que va a durar la animaciA³n.<br>
+                Primero se escribe un valor numA©rico (los segundos) y seguido la "s" (por ejemplo: 3s).</p><br>
+            <h4 id="tutorial_subtitulo">[Tipo de animaciA³n]:</h4>
+            <p>Esta posibilidad es opcional. Tenemos la posibilidad de indicar un tipo de 'easing', es decir, si la
+                animaciA³n empezarA¡ suavemente e irA¡ acelerA¡ndose progresivamente, si pasarA¡ todo lo contrario o si el
+                movimiento tendrA¡ una velocidad uniforme durante todo su recorrido entre otras.
+            </p>
+            <p>Algunas de las posibilidades son las siguientes:</p>
+            <ul>
+                <li><b>linear:</b> La velocidad de la animaciA³n es uniforme en todo el recorrido.</li>
+                <li><b>ease:</b> La velocidad se acelera al inicio, luego se retarda un poco y se acelera al final de
+                    nuevo.</li>
+                <li><b>ease-in:</b> La animaciA³n empieza lentamente y va aumentando progresivamente.</li>
+                <li><b>ease-out:</b> La animaciA³n empieza muy rA¡pida y va descendiendo progresivamente.</li>
+                <li><b>ease-in-out:</b> La animaciA³n empieza y acaba lentamente, y es en la parte central del recorrido
+                    donde la velocidad es mA¡s rA¡pida.</li>
+            </ul>
+            <h4 id="tutorial_subtitulo">[Retardo]:</h4>
+            <p>En este apartado es posible posible especificar un tiempo (en segundos) que el navegador esperarA¡ antes
+                de iniciar la animaciA³n.
+                Se especifica el nAºmero de segundos a esperar seguido de la "s" (por ejemplo: 1s).</p>
+            <div id="tutorial_bloque_codigo">
+                #tutorial_objeto_transformacion_base{<br>
+                opacity:1;<br>
+                transition:opacity 2s ease-out 0.5s;<br>
+                }
+
+                #tutorial_objeto_transformacion_base:hover{
+                opacity:0;
+                }
+            </div><br>
+            <img src="imagenes/martillo.png" alt="transformacion" width="80px" id="tutorial_objeto_transicion_opacidad"><br>
+            <p>Cuando coloques el cursor encima del martillo que hay sobre estas lA­neas, primero -se esperarA¡ medio
+                segundo (0.5s)-, despuA©s de la espera, el martillo se irA¡ haciendo transparente en una animaciA³n con
+                deceleraciA³n (ease-out) que durarA¡ 2 segundos (empezarA¡ muy rA¡pido y a medida que vaya haciendose
+                transparente irA¡ reduciendo la velocidad).</p>
+        </article>
+        <article>
+            <h2>Compatibilidad con todos los navegadores</h2>
+            <p>Las transiciones suavizan los cambios de estado en elementos interactivos y ayudan a comunicar respuesta visual con mayor naturalidad.</p>
+            <p>AsA­, el cA³digo del ejemplo anterior queda de la siguiente manera:</p>
+            <div id="tutorial_bloque_codigo">
+                #tutorial_objeto_transformacion_base{<br>
+                opacity:1;<br>
+                -webkit-opacity:1;<br>
+                -moz-opacity:1;<br>
+                -o-opacity:1;<br>
+                -ms-opacity:1;<br><br>
+
+                transition:opacity 2s ease-out 0.5s;<br>
+                -webkit-transition:opacity 2s ease-out 0.5s;<br>
+                -moz-transition:opacity 2s ease-out 0.5s;<br>
+                -o-transition:opacity 2s ease-out 0.5s;<br>
+                -ms-transition:opacity 2s ease-out 0.5s;<br>
+                }<br><br>
+
+                #tutorial_objeto_transformacion_base:hover{<br>
+                opacity:0; <br>
+                -webkit-opacity:0;<br>
+                -moz-opacity:0;<br>
+                -o-opacity:0;<br>
+                -ms-opacity:0;<br>
+                }
+            </div>
+            <p> Hasta hace poco Internet Explorer 9 todavia no era compatible con las transiciones, mientras que el
+                resto de navegadores lo aceptan desde versiones anteriores a las actuales.</p>
+        </article>
+    </section>
+<footer>
+        <div><br>&#169; Saul Stiven Garcia Olivar (2026)<br>
+            <img src="imagenes/email.png" align="center"> saulgarcia@unimayor.edu.co</a>
+        </div>
+        Tutorial HTML5 + CSS / Desarrollo Software /Desarrollo de Aplicaciones Web</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

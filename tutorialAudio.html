@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="css/estiloSsart.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS Audio</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="tutorialIndice.html">Inicio</a></li>
+            <li><a href="tutorialBordes.html">Bordes</a></li>
+            <li><a href="tutorialSombras.html">Sombras</a></li>
+            <li><a href="tutorialImagenes.html">Imagenes</a></li>
+            <li><a href="tutorialPosicionamiento.html">Posicion</a></li>
+            <li><a href="tutorialTransformacion.html">Transformacion</a></li>
+            <li><a href="tutorialFormularios.html">Formularios</a></li>
+            <li><a href="tutorialMarcoIntegrado.html">iframe</a></li>
+            <li><a href="tutorialTransiciones.html">Transiciones</a></li>
+            <li><a href="tutorialColumnas.html">Columnas</a></li>
+            <li><a href="tutorialVideo.html">Video</a></li>
+            <li><a href="tutorialAudio.html">Audio</a></li>
+            <li><a href="tutorialTransparencias.html">Transparencias</a></li>
+            <li><a href="tutorialAnimacion.html">Animacion</a></li>
+            <li><a href="tutorialGraficosVectoriales.html">SVG</a></li>
+            <li><a href="tutorialContenidoEditable.html">Contenido editable</a></li>
+            <li><a href="tutorialAlmacenamiento.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Diferentes estandares de audio</h2>
+        <article>
+            <p>La etiqueta audio permite reproducir sonido de manera directa en el navegador. Incluir varios formatos mejora la compatibilidad en distintos sistemas.</p>
+            <p>Estos 2 formatos de audio mayoritarios son:</p>
+            <div class="tutorial_contenedor_principal">
+                <img src="formatos/mp3b.png" alt="Audio">
+                <div class="tutorial_caja_descriptiva">
+                    <p>El formato MP3 (ficheros con extension .mp3) abarca a la mayoria de navegadores, excepto a
+                        FireFox. Aunque esta ampliamente arraigado, esta sujeto a patentes..</p>
+                </div>
+            </div>
+            <div class="tutorial_contenedor_principal">
+                <img src="formatos/ogg.png" alt="Audio">
+                <div class="tutorial_caja_descriptiva">
+                    <p>El formato OGG (ficheros con extension .ogg) es un formato de audio libre de patentes, que
+                        abarca a la mayoria de navegadores, excepto a Internet Explorer y Safari.</p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section>
+        <h2>Compatibilidad con navegadores</h2>
+        <p>La tabla de formatos de audios aceptados por los diferentes navegadores queda asi:</p>
+        <table>
+            <tr>
+                <th></th>
+                <th id="tutorial_encabezado_tabla">MP3</th>
+                <th id="tutorial_encabezado_tabla">OGG</th>
+                <th id="tutorial_encabezado_tabla">WAV</th>
+            </tr>
+            <tr>
+                <th id="tutorial_encabezado_tabla">Firefox</th>
+                <td>NO</td>
+                <td>si</td>
+                <td>si</td>
+            </tr>
+            <tr>
+                <th id="tutorial_encabezado_tabla">Chrome</th>
+                <td>si</td>
+                <td>si</td>
+                <td>si</td>
+            </tr>
+            <tr>
+                <th id="tutorial_encabezado_tabla">Opera</th>
+                <td>si</td>
+                <td>si</td>
+                <td>si</td>
+            </tr>
+            <tr>
+                <th id="tutorial_encabezado_tabla">Safari</th>
+                <td>si</td>
+                <td>NO</td>
+                <td>si</td>
+            </tr>
+            <tr>
+                <th id="tutorial_encabezado_tabla">IExplorer</th>
+                <td>si</td>
+                <td>NO</td>
+                <td>NO</td>
+            </tr>
+        </table>
+
+        <p>
+            < audio> El codigo sencillo para un unico formato de audio seria asi:
+        </p><br>
+        <div id="tutorial_bloque_codigo">
+            < audio src="audio.mp3">
+                < /audio>
+        </div><br>
+        <p>En el tag 'audio' es posible incorporar algunos atributos de control del audio, como son:</p>
+        <ul>
+            <li><b>controls</b>: Establece si tendra la barra de navegacion (play, stop, volumen...) o no</li>
+            <li><b>autoplay</b>: Indica si el audio se inicia automaticamente al cargar la pagina html</li>
+            <li><b>loop</b>: Establece si al acabar el audio, este debe volver a empezar indefinidamente</li>
+            <li><b>preload</b>: Indica si el audio se empieza a cargar cuando el navegador carga la pagina html</li>
+        </ul>
+
+        <p>Por lo tanto, si utilizasemos algunos atributos, el codigo anterior quedaria de la siguiente manera:</p><br>
+        <div id="tutorial_bloque_codigo">
+            < audio src="audio.mp3" autoplay controls loop>
+                < /audio>
+        </div><br>
+    </section>
+
+    <section>
+        <h2>Ejemplo practico</h2>
+        <p>Si queremos que el audio se pueda escuchar desde cualquier navegador (que soporte HTML5), tenemos que anadir
+            a este codigo mas posibilidades y por lo tanto tenemos que tener el audio grabado al menos en formato mp3 y
+            ogg. Por lo que el codigo completo quedaria asi:</p>
+        <div id="tutorial_bloque_codigo">
+            < audio controls><br>
+                < source src="audio.mp3" type="audio/mpeg" /><br>
+                < source src="audio.ogg" type="audio/ogg" /><br>
+                < /audio>
+        </div><br>
+        <p>En este ejemplo se han utilizado los atributos de 'autoplay' (para que escuches el audio cuando entres en
+            esta pagina) y 'controls' (para mostrar la barra de controles).
+        </p>
+        <audio controls preload="auto"> >
+            <source src="formatos/scor.mp3" type="audio/mpeg" />
+            </audio>
+    </section>
+<footer>
+        <div><br>&#169; Saul Stiven Garcia Olivar (2026)<br>
+            <img src="imagenes/email.png" align="center"> saulgarcia@unimayor.edu.co</a>
+        </div>
+        Tutorial HTML5 + CSS / Desarrollo Software /Desarrollo de Aplicaciones Web</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

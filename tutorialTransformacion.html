@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="css/estiloSsart.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS Transformacion</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="tutorialIndice.html">Inicio</a></li>
+            <li><a href="tutorialBordes.html">Bordes</a></li>
+            <li><a href="tutorialSombras.html">Sombras</a></li>
+            <li><a href="tutorialImagenes.html">Imagenes</a></li>
+            <li><a href="tutorialPosicionamiento.html">Posicion</a></li>
+            <li><a href="tutorialTransformacion.html">Transformacion</a></li>
+            <li><a href="tutorialFormularios.html">Formularios</a></li>
+            <li><a href="tutorialMarcoIntegrado.html">iframe</a></li>
+            <li><a href="tutorialTransiciones.html">Transiciones</a></li>
+            <li><a href="tutorialColumnas.html">Columnas</a></li>
+            <li><a href="tutorialVideo.html">Video</a></li>
+            <li><a href="tutorialAudio.html">Audio</a></li>
+            <li><a href="tutorialTransparencias.html">Transparencias</a></li>
+            <li><a href="tutorialAnimacion.html">Animacion</a></li>
+            <li><a href="tutorialGraficosVectoriales.html">SVG</a></li>
+            <li><a href="tutorialContenidoEditable.html">Contenido editable</a></li>
+            <li><a href="tutorialAlmacenamiento.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Transformacion</h2>
+        <article>
+            <p>Las transformaciones permiten modificar orientacion, escala o desplazamiento de un elemento sin alterar su marcado, aportando dinamismo controlado a la interfaz.</p>
+            <div class="tutorial_contenedor_principal">
+                <img src="imagenes/martillo.png" alt="transformacion" width="80px">
+                <div class="tutorial_caja_descriptiva">
+                        <p> A este < div> le vamos a aplicar todas las transformaciones de posicion, rotacion, escala y
+                            sesgo, partiendo
+                            de esta posicion, tamano, escala y apariencia original.
+                    </p>
+                    <p>Es muy importante tener en cuenta que para que 'transform' funcione en todos los navegadores
+                        deberemos repetir las propiedades anteponiendo los prefijos de cada uno de los navegadores:<br>
+                        <b>-webkit-</b> (para Chrome y Safari)<br>
+                        <b>-moz-</b> (para Firefox).<br>
+                        <b>-o-</b> (para Opera)<br>
+                        <b>-ms-</b> (para versiones modernas de Internet Explorer).
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <h2>Desplazamiento (translate)</h2>
+            <p>Las transformaciones permiten modificar orientacion, escala o desplazamiento de un elemento sin alterar su marcado, aportando dinamismo controlado a la interfaz.</p>
+            <div id="tutorial_bloque_codigo">
+                <p>#tutorial_objeto_transformacion_base{<br>
+                    transform:translate(200px,5px);<br>
+                    }</p>
+            </div>
+            <div>
+                <img src="imagenes/martillo.png" alt="transformacion" width="80px" id="tutorial_objeto_transformacion_base">
+            </div>
+            <p>Tambien es posible utilizar porcentajes, si queremos colocar este martillo en la mitad horizontal de la
+                pantalla (osea 'centrar el martillo horizontalmente') podemos indicar un porcentaje (50%), en vez de
+                utilizar pixeles.</p>
+            <div id="tutorial_bloque_codigo">
+                <p>#tutorial_objeto_transformacion_base{<br>
+                    transform:translate(50%,5px);<br>
+                    }</p>
+            </div>
+            <div>
+                <img src="imagenes/martillo.png" alt="transformacion" width="80px" id="tutorial_objeto_transformacion_porcentaje">
+            </div>
+        </article>
+        <article>
+            <h2>Rotacion (rotate)</h2>
+            <p>Las transformaciones permiten modificar orientacion, escala o desplazamiento de un elemento sin alterar su marcado, aportando dinamismo controlado a la interfaz.</p>
+                <div id="tutorial_bloque_codigo">
+                    <p>#tutorial_objeto_transformacion_base{<br>
+                        transform:rotate(90deg);<br>
+                        }</p>
+                </div>
+                <div>
+                    <img src="imagenes/martillo.png" alt="transformacion" width="80px" id="tutorial_objeto_transformacion_rotacion">
+                </div>
+        </article>
+        <article>
+            <h2>Escala (scale)</h2>
+            <p>Las transformaciones permiten modificar orientacion, escala o desplazamiento de un elemento sin alterar su marcado, aportando dinamismo controlado a la interfaz.</p>
+            <div id="tutorial_bloque_codigo">
+                #tutorial_objeto_transformacion_base{<br>
+                transform:scale(2,1.75);<br>
+                }
+            </div><br><br>
+            <div>
+                <img src="imagenes/martillo.png" alt="transformacion" width="80px" id="tutorial_objeto_transformacion_escala">
+            </div><br>
+                <p>En este caso, el < div> del martillo aumenta de tamano no proporcionalmente. Aumenta el doble de anchura
+                    (2x100= 200%) y tan solo un 175% de altura (1.75x100= 175%).</p>
+        </article>
+        <article>
+            <h2>Sesgo (skew)</h2>
+            <p>Las transformaciones permiten modificar orientacion, escala o desplazamiento de un elemento sin alterar su marcado, aportando dinamismo controlado a la interfaz.</p>
+            <div id="tutorial_bloque_codigo">
+                #tutorial_objeto_transformacion_base{<br>
+                transform:skew(10,25);<br>
+                }
+
+            </div>
+            <div>
+                <img src="imagenes/martillo.png" alt="transformacion" width="80px" id="tutorial_objeto_transformacion_sesgo">
+            </div>
+        </article>
+        <article>
+            <h2>Multiples transformaciones simultaneas</h2>
+            <p>Las transformaciones permiten modificar orientacion, escala o desplazamiento de un elemento sin alterar su marcado, aportando dinamismo controlado a la interfaz.</p>
+            <div id="tutorial_bloque_codigo">
+                #tutorial_objeto_transformacion_base{<br>
+                transform:translate(200px, 0px) rotate(33deg) scale(0.5,0.5);<br>
+                }
+            </div>
+            <div>
+                <img src="imagenes/martillo.png" alt="transformacion" width="80px" id="tutorial_objeto_transformacion_compuesta">
+            </div>
+            <p>En este ejemplo, al < div > del martillo se le aplica un desplazamiento hacia la derecha de 200 pixeles, al mismo tiempo una
+                rotacion hacia la derecha de 33 grados y finalmente una reduccion de tamano proporcional del 50%.</p>
+        </article>
+        <article>
+            <h2>Compatibilidad con todos los navegadores</h2>
+            <p>Las transformaciones permiten modificar orientacion, escala o desplazamiento de un elemento sin alterar su marcado, aportando dinamismo controlado a la interfaz.</p>
+                <div id="tutorial_bloque_codigo">
+                    #tutorial_objeto_transformacion_base{<br>
+   transform:translate(200px, 0px) rotate(33deg) scale(0.5,0.5);<br>
+   -webkit-transform:translate(200px, 0px) rotate(33deg) scale(0.5,0.5);<br>
+   -moz-transform:translate(200px, 0px) rotate(33deg) scale(0.5,0.5);<br>
+   -o-transform:translate(200px, 0px) rotate(33deg) scale(0.5,0.5);<br>
+   -ms-transform:translate(200px, 0px) rotate(33deg) scale(0.5,0.5);<br>
+}
+                </div>
+        </article>
+    </section>
+<footer>
+        <div><br>&#169; Saul Stiven Garcia Olivar (2026)<br>
+            <img src="imagenes/email.png" align="center"> saulgarcia@unimayor.edu.co</a>
+        </div>
+        Tutorial HTML5 + CSS / Desarrollo Software /Desarrollo de Aplicaciones Web</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

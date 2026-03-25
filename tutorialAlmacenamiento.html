@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="css/estiloSsart.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS Storage</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="tutorialIndice.html">Inicio</a></li>
+            <li><a href="tutorialBordes.html">Bordes</a></li>
+            <li><a href="tutorialSombras.html">Sombras</a></li>
+            <li><a href="tutorialImagenes.html">Imagenes</a></li>
+            <li><a href="tutorialPosicionamiento.html">Posicion</a></li>
+            <li><a href="tutorialTransformacion.html">Transformacion</a></li>
+            <li><a href="tutorialFormularios.html">Formularios</a></li>
+            <li><a href="tutorialMarcoIntegrado.html">iframe</a></li>
+            <li><a href="tutorialTransiciones.html">Transiciones</a></li>
+            <li><a href="tutorialColumnas.html">Columnas</a></li>
+            <li><a href="tutorialVideo.html">Video</a></li>
+            <li><a href="tutorialAudio.html">Audio</a></li>
+            <li><a href="tutorialTransparencias.html">Transparencias</a></li>
+            <li><a href="tutorialAnimacion.html">Animacion</a></li>
+            <li><a href="tutorialGraficosVectoriales.html">SVG</a></li>
+            <li><a href="tutorialContenidoEditable.html">Contenido editable</a></li>
+            <li><a href="tutorialAlmacenamiento.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Tipos de datos guardados</h2>
+        <article>
+            <p>Web Storage permite guardar datos simples del usuario en el navegador para conservar estado o preferencias, sin necesidad de base de datos en esta etapa de practica.</p>
+            <p><b id="tutorial_subtitulo">sessionStorage:</b>Los datos guardados permanecen mientras el usuario tiene el
+                navegador abierto. Al cerrar el navegador los datos se borran automaticamente.</p>
+            <p><b id="tutorial_subtitulo">localStorage:</b>Los datos guardados permanecen siempre, incluso si se cierra el
+                navegador y se apaga el ordenador.</p>
+            <p>Es importante senalar que la informacion guardada es accesible solo desde el mismo navegador que ha
+                guardado los datos. Es decir, el localStorage de Chrome es diferente al localStorage de Opera o de
+                Firefox. Por lo que se si guardan unos determinados datos desde Chrome, al acceder a la misma pagina con
+                -por ejemplo- Firefox unicamente se podran leer los datos guardados desde Firefox, no los generados
+                desde Chrome.</p>
+        </article>
+        <article>
+            <h2>Las palabras magicas</h2>
+            <p>Web Storage permite guardar datos simples del usuario en el navegador para conservar estado o preferencias, sin necesidad de base de datos en esta etapa de practica.</p>
+            <div id="tutorial_bloque_codigo">
+                <pre>
+                    &lt;script type="text/javascript"&gt;&lt;/script&gt;
+                        </pre>
+            </div>
+            <h4 id="tutorial_subtitulo">Guardar un dato</h4>
+            <p>Para guardar un valor tenemos que proporcionar 3 datos:</p>
+            <ul>
+                <li><b>a)localStorage</b> (si los datos seran permanentes) o <b>sessionStorage</b> (si los datos se
+                    borraran cuando el usuario cierre el navegador).
+                </li>
+                <li>
+                    <b>b)Un nombre</b> que le daremos a esa informacion (este valor solo sirve para poder hacer
+                    referencia a ella).
+                </li>
+                <li>
+                    <b>c)La informacion</b> a guardar (normalmente escrita entre comillas).
+                </li>
+            </ul>
+            <p>Por ejemplo:</p>
+            <div id="tutorial_bloque_codigo">
+                localStorage.nombre='Javier';
+            </div>
+            <p>Este codigo guarda permanentemente el dato "Javier" dentro del dato llamado nombre.</p>
+
+            <h4 id="tutorial_subtitulo">Recuperar la informacion</h4>
+            <p>Para leer o recuperar la informacion necesitamos tambien 3 datos:</p>
+            <ul>
+                <li><b>a)localStorage</b> (si los datos eran permanentes) o <b>sessionStorage</b> ((si los datos tenian
+                    solo vigencia dentro de la presente sesion).
+                </li>
+                <li>
+                    <b>b)Un nombre</b> que le daremos a esa informacion (este valor solo sirve para poder hacer
+                    referencia a ella).que le dimos a esa informacion cuando se guardo.
+                </li>
+                <li>
+                    <b>c)Una variable</b> donde guardar dicha informacion (o en su defecto un alert que muestre en
+                    pantalla dicha informacion).
+                </li>
+            </ul>
+            <p>Por ejemplo:</p>
+            <div id="tutorial_bloque_codigo">
+                alert('La informacion recuperada ha sido '+ localStorage.nombre);
+            </div>
+            <p>El 'alert' sirve para que aparezca una ventana flotante de alerta con un texto que sera 'La informacion
+                recuperada ha sido ' mas la informacion llamada nombre guardada en localStorage.</p>
+            <h4 id="tutorial_subtitulo">Eliminar un dato</h4>
+            <p>Para eliminar unicamente un dato utilizamos la orden 'localStorage.removeItem()':</p>
+            <div id="tutorial_bloque_codigo">
+                localStorage.removeItem('nombre');
+            </div>
+            <p>En este caso eliminamos los datos (en este ejemplo de caracter permanente) llamados como 'nombre'.</p>
+            <h4 id="tutorial_subtitulo">Eliminar todos los datos existentes</h4>
+            <div id="tutorial_bloque_codigo">
+                localStorage.clear();<br>
+                sessionStorage.clear();
+            </div>
+            <p>Con este codigo eliminamos todos los datos, tantos permanentes como los que tienen vigencia dentro de la
+                presente sesion del navegador.</p>
+            <h4 id="tutorial_subtitulo">Para conocer cuantos datos hay guardados...</h4>
+            <p>Ya, para rizar el rizo, podemos conocer cuantos elementos (permanentes o no) hay guardados utilizando el
+                atributo '.length'.</p>
+            <div id="tutorial_bloque_codigo">
+                alert('Hay ' + localStorage.length + 'elementos guardados');
+            </div>
+        </article>
+        <article>
+            <h2>Ejemplo practico paso a paso</h2>
+            <p>Web Storage permite guardar datos simples del usuario en el navegador para conservar estado o preferencias, sin necesidad de base de datos en esta etapa de practica.</p>
+            <div id="tutorial_bloque_codigo">
+                Visitas: 3 veces.
+            </div>
+            <p>Dentro del < head>, anadimos el siguiente codigo:</p>
+            <div id="tutorial_bloque_codigo">
+                &lt;script type="text/javascript"&gt;
+                if (localStorage.veces==undefined){
+                localStorage.veces=1;
+                } else {
+                localStorage.veces=Number(localStorage.veces)+1;
+                }
+                document.write("Visitas: "+localStorage.veces+" veces.");
+                &lt;/script&gt;
+            </div>
+            <p>Empezemos a despedazar el codigo linea a linea:
+                (Si durante la explicacion sientes mareos, perdida de vision momentanea, vomitos, palpitacions agudas o
+                se te para el corazon de golpe haz una pausa prolongada en la lectura y no lo vuelvas a intentar).</p>
+            <div id="tutorial_bloque_codigo">
+                if (localStorage.veces==undefined){
+            </div>
+            <p>La traduccion al castellano actual seria: si este dato tiene un valor no definido (undefined), es decir;
+                si no existe. Deducimos que si no existe quiere decir que es la primera vez que se ha accedido a esta
+                pagina...</p>
+            <div id="tutorial_bloque_codigo">
+                localStorage.veces=1;
+            </div>
+            <p>Si se cumple la condicion anterior escribira un 1 dentro del dato llamado localStorage.veces (que
+                recordamos que estaba vacio).</p>
+            <div id="tutorial_bloque_codigo">
+                } else {
+            </div>
+            <p>Sino (es decir, si el dato 'NO es undefined', que es lo mismo que decir, si el dato 'tiene algun
+                valor')..</p>
+            <div id="tutorial_bloque_codigo">
+                localStorage.veces = Number(localStorage.veces)+ 1;
+            </div>
+            <p>Entonces le sumara 1 al valor que tenga localStorage.veces en ese momento.</p><br>
+            <p>El 'Number' que hay enmedio de la linea no es para complicar mas aun la lectura (como algunos estan
+                pensando). Sirve para que sume 1 y no anada 1, ya que si a 1 se le anade 1 el resultado es 11 (cosa que
+                no nos interesa), pero si a 1 se le suma 1 el resultado es 2 (que es lo que queremos que realmente
+                ocurra).
+            </p>
+            <div id="tutorial_bloque_codigo">
+                document.write("Visitas: "+localStorage.veces+" veces.");
+            </div>
+            <p>Finalmente escribe en el documento (osea en la pagina web) el texto "Visitas: " seguido del dato que ha
+                leido en lineas anteriores y despues le anade "veces." para que muestre algo asi como "Visitas: 2
+                veces".</p>
+            <p>Si queremos que esta informacion este integrada en un lugar determinado del html y ademas este maqueda
+                con CSS3, entonces tendremos que recurrir a javaScript, jQuery o similares.</p>
+        </article>
+    </section>
+<footer>
+        <div><br>&#169; Saul Stiven Garcia Olivar (2026)<br>
+            <img src="imagenes/email.png" align="center"> saulgarcia@unimayor.edu.co</a>
+        </div>
+        Tutorial HTML5 + CSS / Desarrollo Software /Desarrollo de Aplicaciones Web</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

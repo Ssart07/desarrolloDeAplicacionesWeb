@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="css/estiloSsart.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS iframe</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="tutorialIndice.html">Inicio</a></li>
+            <li><a href="tutorialBordes.html">Bordes</a></li>
+            <li><a href="tutorialSombras.html">Sombras</a></li>
+            <li><a href="tutorialImagenes.html">Imagenes</a></li>
+            <li><a href="tutorialPosicionamiento.html">Posicion</a></li>
+            <li><a href="tutorialTransformacion.html">Transformacion</a></li>
+            <li><a href="tutorialFormularios.html">Formularios</a></li>
+            <li><a href="tutorialMarcoIntegrado.html">iframe</a></li>
+            <li><a href="tutorialTransiciones.html">Transiciones</a></li>
+            <li><a href="tutorialColumnas.html">Columnas</a></li>
+            <li><a href="tutorialVideo.html">Video</a></li>
+            <li><a href="tutorialAudio.html">Audio</a></li>
+            <li><a href="tutorialTransparencias.html">Transparencias</a></li>
+            <li><a href="tutorialAnimacion.html">Animacion</a></li>
+            <li><a href="tutorialGraficosVectoriales.html">SVG</a></li>
+            <li><a href="tutorialContenidoEditable.html">Contenido editable</a></li>
+            <li><a href="tutorialAlmacenamiento.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>
+            < i frame>
+        </h2>
+        <article>
+            <p>El elemento iframe incrusta contenido externo dentro de la pagina, una solucion util para mapas, paneles y referencias sin duplicar informacion.</p>
+            <br>
+            <p>La sintaxis es la siguiente: </p>
+            <div id="tutorial_bloque_codigo">
+                < iframe width="640" height="510" src="http://www..." frameborder="0">
+                    < /iframe>
+            </div>
+            <p>
+                Los atributos que utilizamos son <b>width</b> y <b>height</b> para definir el tamaA±o que tendrA¡ la
+                ventana que
+                mostrarA¡ el contenido, frameborder para que esta ventana o marco no tenga borde, y sobre todo src para
+                indicar quA© pA¡gina o contenido se debe mostrar dentro de esta ventana.
+            </p>
+        </article>
+        <article>
+            <h2>AA±adir un mapa de google Maps</h2>
+            <div class="tutorial_contenedor_iframe">
+                <img src="imagenes/gg.png" alt="mapa" width="100px">
+                <div class="tutorial_caja_descriptiva">
+                    <p>El elemento iframe incrusta contenido externo dentro de la pagina, una solucion util para mapas, paneles y referencias sin duplicar informacion.</p>
+                    <p>Buscamos la direcciA³n del mapa que queremos mostrar<br>
+                        (o el nombre de la empresa si existe en Google Maps).</p>
+                </div>
+            </div>
+            <div class="tutorial_contenedor_iframe">
+                <img src="imagenes/gm.png" alt="mapa" width="500px">
+                <div class="tutorial_caja_descriptiva">
+                    <p>Aplicamos el zoom que deseemos.<br>
+                        Pulsamos sobre el botA³n "ConfiguraciA³n"<br>
+                        (ubicado en la parte inferior derecha de la pantalla)<br>
+                        y seleccionamos la opciA³n:<br>
+                        "Compartir e insertar mapa".</p>
+                    <img src="imagenes/gm1.png" alt="compartir" width="200px">
+                </div>
+            </div>
+
+            <div class="tutorial_contenedor_iframe">
+                <img src="imagenes/enlace.png" alt="mapa" width="500px">
+                <div class="tutorial_caja_descriptiva">
+                    <p>Seleccionamos la pestaA±a superior derecha:<br>
+                        "Insertar mapa".</p>
+                </div>
+            </div>
+
+            <div class="tutorial_contenedor_iframe">
+                <img src="imagenes/gm2.png" alt="mapa" width="500px">
+                <div class="tutorial_caja_descriptiva">
+                    <p>Para indicar el tamaA±o del mapa hacemos<br>
+                        clic sobre la opciA³n que inicialmente muestra<br>
+                        el valor "Mediano":<br>
+                        (ubicado en la parte superior izquierda de la pantalla)..</p>
+                    <img src="imagenes/gm3.png" alt="mapa" width="200px">
+                    <p>Seleccionamos la opciA³n:<br>
+                        "TamaA±o personalizado".</p>
+                </div>
+            </div>
+
+            <div class="tutorial_contenedor_iframe">
+                <img src="imagenes/gm4.png" alt="mapa" width="500px">
+                <div class="tutorial_caja_descriptiva">
+                    <p>Escribimos la anchura y altura<br>
+                        que queremos que tenga el mapa<br>
+                        (expresado en pA­xeles)</p><br>
+                    <p>Copiamos todo el cA³digo<br>
+                        (el que empieza por < iframe...>).</p>
+                </div>
+            </div>
+            <p>Lo pegamos dentro de un < div > que debe tener un nombre de id o class para poder editarlo posteriormente con CSS.</p>
+        </article>
+        <article>
+            <h3>Ejemplo</h3>
+            <div class="tutorial_marco_visual">
+                <iframe width="600" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.441086419714!2d-3.703790984593698!3d40.41677577936409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42288a9c5b9e7b%3A0x6c8e9a7c8e5e5b8!2sPuerta%20del%20Sol%2C%20Madrid%2C%20Espa%C3%B1a!5e0!3m2!1ses-419!2sve!4v1687862036446!5m2!1ses-419!2sve" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </article>
+    </section>
+<footer>
+        <div><br>&#169; Saul Stiven Garcia Olivar (2026)<br>
+            <img src="imagenes/email.png" align="center"> saulgarcia@unimayor.edu.co</a>
+        </div>
+        Tutorial HTML5 + CSS / Desarrollo Software /Desarrollo de Aplicaciones Web</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

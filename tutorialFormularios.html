@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tutorial </title>
+    <link rel="stylesheet" href="css/estiloSsart.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS Formularios</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="tutorialIndice.html">Inicio</a></li>
+            <li><a href="tutorialBordes.html">Bordes</a></li>
+            <li><a href="tutorialSombras.html">Sombras</a></li>
+            <li><a href="tutorialImagenes.html">Imagenes</a></li>
+            <li><a href="tutorialPosicionamiento.html">Posicion</a></li>
+            <li><a href="tutorialTransformacion.html">Transformacion</a></li>
+            <li><a href="tutorialFormularios.html">Formularios</a></li>
+            <li><a href="tutorialMarcoIntegrado.html">iframe</a></li>
+            <li><a href="tutorialTransiciones.html">Transiciones</a></li>
+            <li><a href="tutorialColumnas.html">Columnas</a></li>
+            <li><a href="tutorialVideo.html">Video</a></li>
+            <li><a href="tutorialAudio.html">Audio</a></li>
+            <li><a href="tutorialTransparencias.html">Transparencias</a></li>
+            <li><a href="tutorialAnimacion.html">Animacion</a></li>
+            <li><a href="tutorialGraficosVectoriales.html">SVG</a></li>
+            <li><a href="tutorialContenidoEditable.html">Contenido editable</a></li>
+            <li><a href="tutorialAlmacenamiento.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Formularios</h2>
+        <article>
+            <h2>Nuevas etiquetas para formularios</h2>
+            <p>Los formularios son el mecanismo principal para capturar datos del usuario. HTML5 agrega validaciones nativas y controles que simplifican la creacion de experiencias confiables.</p>
+            <div id="tutorial_bloque_codigo">
+                < form action="enviarmail.php" method="post">
+                    < /form>
+            </div>
+            <p>En este caso, detras de action hemos anadido la ruta del fichero .php que enviara los datos introducidos
+                en el formulario y al final con method indicamos el metodo "post", que garantiza una mayor seguridad
+                para los datos enviados.</p>
+                <p>Vamos a echar un vistazo a las diferentes etiquetas o <inputs> que componen el formulario de ejemplo
+                    superior para poder ver las nuevas caracteristicas que HTML5 aporta:</p>
+            <h4 id="tutorial_subtitulo">Tu nombre (text)</h4>
+            <div id="tutorial_bloque_formulario">
+                < input type="text" size="40" title="Escribe tu nombre real. Es el que aparecera en tu..." name="nombre"
+                    autofocus required />
+            </div>
+            <p>Con <b>type</b> indicamos que tipo de datos estamos pidiendo (en este caso 'texto normal').<br>
+                Si queremos un campo de texto mas largo o extenso podemos especificarlo con <b>size</b>.<br>
+                Con <b>title</b> podemos incluir un texto adicional que aparecera cuando el usuario coloque el cursor
+                encima.<br>
+                <b>name</b> es importante ya que es la manera en la que se identificara este valor al enviar la
+                informacion.<br>
+                En todo el formulario solo puede haber un campo con <b>autofocus</b>, ya que este parametro senala que
+                campo del formulario estara inicialmente seleccionado por defecto para que el usuario pueda escribir sin
+                tener que seleccionarlo.<br>
+                El parametro <b>required</b> indica que este campo es obligatorio y que sino se rellena no se podra
+                enviar la informacion.
+            </p>
+
+            <h4 id="tutorial_subtitulo">Contrasena (password)</h4>
+            <div id="tutorial_bloque_formulario">
+                < input type="password" size="7" title="Escribe la contrasena que desee..." name="password" required />
+            </div>
+            <p>Al detectar que en <b>type</b> se especifica el valor 'password' lo que el usuario escribe se enmascara
+                con circulos de forma automatica.<br>
+                El <b>required</b> final nos indica que este campo tambien es obligatorio.
+            </p>
+
+            <h4 id="tutorial_subtitulo">Correo electronico (email)</h4>
+            <div id="tutorial_bloque_formulario">
+                < input type="email" placeholder="usuario@dominio.com" size="40"
+                    title="Escribe tu correo electronico..." name="mail" required />
+            </div>
+            <p>Como en <b>type</b> se especifica 'email' la autovalidacion de este dato incluira la busqueda de una @ y
+                un minimo formato apropiado.<br>
+                En este caso observamos el parametro <b>placeholder</b>, que es el responsable de que inicialmente
+                aparezca ya escrito en gris flojo (usuario@dominio.com). Automaticamente cuando el usuario escribe
+                cualquier valor dicho texto se elimina, igualmente si el usuario borra todo el contenido, el texto
+                especificado con <b>placeholder</b> vuelve a aparecer.
+            </p>
+
+            <h4 id="tutorial_subtitulo">Fecha de nacimiento (date)</h4>
+            <div id="tutorial_bloque_formulario">
+                < input type="date" value="2000-01-01" name="nacimiento"
+                    title="La fecha en la que naciste, ya que..." />
+            </div>
+            <p>El valor 'date' dentro de <b>type</b> identifica que el valor a utilizar es una fecha y que por lo tanto
+                aparecera el acceso a un calendario, que se puede ubicar directamente en una fecha inicial utilizando el
+                parametro 'value'.<br>
+                Asi, <b>value</b> permite especificar la fecha inicial por defecto que aparecera inicialmente en el
+                calendario. Sino se indica ningun valor aparecera la fecha actual.
+            </p><br>
+            <div id="tutorial_bloque_formulario_destacado">
+                Cuantos comics de Flash Gordon lees a la semana? (range)
+            </div>
+            <div id="tutorial_bloque_formulario">
+                < input type="range" min="1" max="7" value="2" step="1" title="Necesitamos saber..." name="adiccion" />
+            </div>
+            <p>
+                Al indicar en <b>type</b> el valor 'range' aparece una barra (slider) con la que el usuario puede
+                introducir un valor numerico arrastrando la barra hasta el valor que corresponda.<br>
+                Con <b>min</b> y <b>max</b> se especifica el valor minimo y maximo que el usuario podra introducir.<br>
+                Para especificar un valor inicial utilizamos el parametro <b>value</b>.<br>
+                Con <b>step</b> podemos especificar el valor de incremento (o decremento) de cada punto del slider. Por
+                ejemplo, un valor de "1" quiere decir que cada vez que el usuario mueve un espacio del slider se aumenta
+                o se disminuye el valor de 1 en 1, y que ademas no seran validos los decimales.
+            </p>
+            <div id="tutorial_bloque_formulario_destacado">
+                Cual crees que hubiera sido el color ideal de las mayas de Flash Gordon? (color)
+            </div>
+            <div id="tutorial_bloque_formulario">
+                < input type="color" value="#FF0000" title="Con esta votacion..." name="color_preferido" />
+            </div>
+            <p>
+                Al indicar en <b>type</b> el valor 'color' aparece un selector de colores en el que se podra escoger el
+                color deseado de entre los que aparecen, o bien indicando el codigo RGB del color.<br>
+                Para especificar un color inicial por defecto utilizamos el parametro <b>value</b> indicando el codigo
+                de color inicial en hexadecimal.
+            </p>
+            <div id="tutorial_bloque_formulario_destacado">
+                Cuantos comics de Flash Gordon tienes actualmente? (number)
+            </div>
+            <div id="tutorial_bloque_formulario">
+                < input type="number" min="100" max="9000" step="1" value="100" title="De momento el ganador..."
+                    name="comics" />
+            </div>
+            <p>
+                Con <b>min</b> y <b>max</b> se especifica el valor minimo y maximo que seran tomados como validos.<br>
+                Para especificar un valor inicial utilizamos el parametro <b>value</b>.<br>
+                Con <b>step</b> podemos especificar el intervalo o 'de cuanto en cuanto' aumentaran o disminuiran los
+                datos introducidos. Por ejemplo, un valor de "10" quiere decir que cada vez que el usuario aumenta o
+                reduce el valor este se mueve de 10 en 10 y que ademas unicamente seran validos los datos que sigan este
+                intervalo (100, 110, 120, 130, etc...)<br>
+            </p>
+            <h4 id="tutorial_subtitulo">Enviar</h4>
+            <div id="tutorial_bloque_formulario">
+                < input type="submit" value="Enviar los datos" />
+            </div>
+            <p>Con <b>type</b>="submit" estamos anadiendo el tipico boton "Enviar", en el que a traves del parametro
+                <b>value</b> podemos indicar el texto que se mostrara dentro del boton.<br>
+                En este caso la accion de enviar la informacion se realizara de la manera automatica, enviando los datos
+                a la direccion que se ha indicado en <b>&lt;form&gt;</b>.
+            </p>
+        </article>
+        <article>
+            <h2>Otras etiquetas o < inputs> existentes</h2>
+            <p>Los formularios son el mecanismo principal para capturar datos del usuario. HTML5 agrega validaciones nativas y controles que simplifican la creacion de experiencias confiables.</p>
+            <ul>
+                <li><b>button</b>: Crea un boton 'vacio'. La accion que se ejecutara cuando el usuario haga clic en el.
+                    La accion a ejecutar se tendra que anadir posteriormente con JavaScript indicando su nombre de
+                    <b>id</b>.
+                </li>
+                <div id="tutorial_bloque_formulario">
+                    <pre>
+&lt;input type="button" value="Votame" id="tutorial_boton_principal"/&gt;
+</pre>
+                </div>
+
+                <input type="button" value="Votame" /><br><br>
+                <li><b>checkbox</b>: Crea cuadros de seleccion en el que se puede seleccionar mas de un valor. Como es
+                    posible marcar multiples checkbox, cada uno tiene que tener un <b>name</b> diferente.<br>Ademas, si
+                    queremos que uno de los valores este marcado inicialmente por defecto, le anadiremos la propiedad
+                    <b>checked</b> (como es el caso de Kabul, -ideal en Agosto-).
+                </li>
+                <div id="tutorial_bloque_formulario">
+                    <pre>
+&lt;input type="checkbox" name="destino1" value="Damasco" /&gt; Damasco (Siria)
+&lt;input type="checkbox" name="destino2" value="Kabul" checked/&gt; Kabul (Afganistan)
+&lt;input type="checkbox" name="destino3" value="Belgrado" /&gt; Belgrado (Serbia)
+</pre>
+                </div>
+                Selecciona que poblaciones visitarias en vacaciones?<br>
+                <input type="checkbox" name="vacaciones" value="Damasco" /> Damasco (Siria)<br>
+                <input type="checkbox" name="vacaciones" value="Kabul" checked /> Kabul (Afganistan)<br>
+                <input type="checkbox" name="vacaciones" value="Belgrado" /> Belgrado (Serbia)<br><br>
+
+                <li><b>color</b>: Permite introducir un color senalandolo a traves de una paleta de colores.
+                    (Desarrollado en el ejemplo superior)</li>
+                <li><b>date</b>: Permite introducir una fecha sobre un calendario. (Desarrollado en el ejemplo superior)
+                </li>
+                <li><b>email</b>: Permite introducir una direccion de correo electronico valida. (Desarrollado en el
+                    ejemplo superior)</li>
+                <li><b>file</b>: Permite que el usuario pueda seleccionar un fichero de su disco duro. Ademas, es
+                    posible indicar un filtro para poder seleccionar unicamente un tipo de fichero determinado.
+                    (Posteriormente para subirlo al servidor o realizar cualquier otra accion con dicho fichero se
+                    tendra que recurrir a JavaScript).</li>
+                <div id="tutorial_bloque_formulario">
+                    <pre>
+&lt;input type="file" name="fichero" accept="image/*" /&gt;
+</pre>
+                </div>
+                <input type="file" name="fichero" accept="image/*" /><br><br>
+                <li><b>hidden</b>: Anadiendo 'hidden' a un elemento del formulario dicho elemento no se visualiza
+                    inicialmente. (Para volver a visualizarlo se debera recurrir a JavaScript).</li>
+                <li><b>number</b>: Permite introducir un numero a traves del teclado o bien utilizando los botones "+" y
+                    "-" del propio elemento. (Desarrollado en el ejemplo
+                    superior)</li>
+                <li><b>password</b>: Permite introducir una contrasena (los valores introducidos aparecen ocultos con
+                    circulos). (Desarrollado en el ejemplo superior)
+                </li>
+                <li><b>radio</b>: Crea circulos de seleccion en el que unicamente se puede seleccionar uno de ellos.
+                    Todos los radio button tienen que tener el mismo valor en <b>name</b>.<br>Si ademas queremos que un
+                    valor este seleccionado inicialmente, anadiremos el parametro 'checked' a la opcion deseada (como
+                    'Mujer' en el siguiente ejemplo).</li>
+                <div id="tutorial_bloque_formulario">
+                    <pre>
+&lt;input type="radio" name="sexo" value="Mujer" checked/&gt; Mujer
+&lt;input type="radio" name="sexo" value="Hombre"/&gt; Hombre y sus derivados
+&lt;input type="radio" name="sexo" value="NS/NC"/&gt; No estoy muy seguro/a
+</pre>
+                </div>
+                Sexo:<br>
+                <input type="radio" name="sexo" value="Mujer" checked /> Mujer<br>
+                <input type="radio" name="sexo" value="Hombre" /> Hombre y sus derivados<br>
+                <input type="radio" name="sexo" value="NS/NC" /> No estoy muy seguro/a<br><br>
+                <li><b>range</b>: Crea una barra (slider) en la que el usuario podra introducir un valor numerico
+                    arrastrando dicho slider a la cantidad deseada. (Desarrollado en el ejemplo superior)</li>
+                <li><b>search</b>: Permite que el usuario pueda introducir un termino de busqueda, que posteriormente se
+                    puede utilizar para que -por ejemplo- Google busque en tu propio dominio.</li>
+                <div id="tutorial_bloque_formulario">
+                    <pre>
+&lt;input type="search" name="buscar" placeholder="Termino a buscar"/&gt;
+</pre>
+                </div>
+                Buscar: <input type="search" name="buscar" placeholder="Termino a buscar" /><br><br>
+                <li><b>submit</b>: Crea el boton de "Enviar". Al hacer clic enviara los datos del formulario a la
+                    direccion indicada en el tag &lt;form&gt;.(Desarrollado
+                    en el ejemplo superior)</li>
+                <li><b>tel</b>: Introduce un numero de telefono. Aunque este <b>type</b> no tiene autovalidacion (se
+                    puede escribir lo que se desee) ofrece importante informacion al navegador del tipo de informacion a
+                    introducir. Asi, navegadores en iPhone4 (iOs 4.2) o Android (HTC Desire) cuando reciben un
+                    <b>type="tel"</b> ofrecen un teclado numerico especial para facilitar la introduccion de este tipo
+                    de informacion.
+                </li>
+                <div id="tutorial_bloque_formulario">
+                    <pre>
+&lt;input type="tel" name="telefono"/&gt;
+</pre>
+                </div>
+                Telefono: <input type="tel" name="telefono" /><br><br>
+                <li><b>text</b>: Permite introducir texto normal. (Desarrollado en el ejemplo superior).</li>
+                <li><b>url</b>: Permite introducir una direccion web de Internet valida. La autovalidacion se ajusta a
+                    detectar una minima estructura de URL.</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>Resumen resumido de los nuevos atributos</h2>
+            <p>Los formularios son el mecanismo principal para capturar datos del usuario. HTML5 agrega validaciones nativas y controles que simplifican la creacion de experiencias confiables.</p>
+            <ul>
+                <li><b>required</b>: El campo es ogligatorio.</li>
+                <li><b>autofocus</b>: Inicialmente el campo esta seleccionado (solo puede haber uno por formulario).
+                </li>
+                <li><b>placeholder</b>: Se muestra un valor por defecto en gris que se elimina cuando el usuario
+                    introduce algun valor.</li>
+                <li><b>autocomplete</b>: Permite el rellenado automatico del &lt;input&gt; en base al texto que vaya
+                    escribiendo el usuario, segun los valores introducidos en ocasiones anteriores.</li>
+            </ul>
+        </article>
+        <article>
+            <h2>Estilos CSS y autovalidacion visual</h2>
+            <p>Los formularios son el mecanismo principal para capturar datos del usuario. HTML5 agrega validaciones nativas y controles que simplifican la creacion de experiencias confiables.</p>
+
+            <h4 id="tutorial_subtitulo">Maquetacion CSS</h4>
+            Para maquetar y dar un estilo determinado al formulario podemos utilizar los selectores referentes a cada
+            uno de
+            los elementos que componen el formulario <b>form</b>, <b>input</b>, <b>fieldset</b>, <b>legend</b>,
+            <b>label</b>...
+            <div id="tutorial_panel_ejemplo">
+                <pre>
+form{
+  background-color:orange;
+  color:black;
+}
+input{
+  color:grey;
+}
+fieldset{
+  border-radius:5px;
+  border:1px dotted green;
+}
+</pre>
+            </div>
+
+            <h4 id="tutorial_subtitulo">Autovalidacion grafica</h4>
+            Para que el formulario pueda resaltar visualmente que campos obligatorios es necesario rellenar, que campos
+            son
+            validos o que campos tienen valores incorrectos utilizamos el selector <b>:invalid{</b>, mientras que el
+            selector <b>[required]{</b> senala aquellos campos que son obligatorios y que los valores introducidos son
+            correctos y <b>:valid{</b> se encarga de gestionar aquellos campos que son correctos.<br>
+            <div id="tutorial_panel_ejemplo">
+                <pre>
+input[required]{
+  border-color:blue;
+  box-shadow:0px 0px 5px blue;
+}
+input:invalid{
+  border-color:red;
+  box-shadow:0px 0px 5px blue;
+}
+input:valid{
+	border-color:green;
+	box-shadow:0px 0px 5px green;
+}
+</pre>
+            </div>
+            <p>Con este codigo CSS todos los campos con valores obligatorios (es decir, que tengan el atributo
+                <b>required</b>)
+                y que tengan un valor correcto, tendran el borde de color verde y una sombra interna tambien verde.
+                Aquellos
+                campos que tienen valores incorrectos o bien estan sin rellenar, siendo obligatorios, tendran un borde y
+                una
+                sombra interna de 8 pixeles de color rojo y aquellos campos que tengan un contenido valido, tendran
+                tanto el
+                borde como la sombra de color azul.
+            </p>
+
+        </article>
+
+    </section>
+<footer>
+        <div><br>&#169; Saul Stiven Garcia Olivar (2026)<br>
+            <img src="imagenes/email.png" align="center"> saulgarcia@unimayor.edu.co</a>
+        </div>
+        Tutorial HTML5 + CSS / Desarrollo Software /Desarrollo de Aplicaciones Web</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

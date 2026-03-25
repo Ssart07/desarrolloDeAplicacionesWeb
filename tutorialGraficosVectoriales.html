@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="css/estiloSsart.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS SVG</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="tutorialIndice.html">Inicio</a></li>
+            <li><a href="tutorialBordes.html">Bordes</a></li>
+            <li><a href="tutorialSombras.html">Sombras</a></li>
+            <li><a href="tutorialImagenes.html">Imagenes</a></li>
+            <li><a href="tutorialPosicionamiento.html">Posicion</a></li>
+            <li><a href="tutorialTransformacion.html">Transformacion</a></li>
+            <li><a href="tutorialFormularios.html">Formularios</a></li>
+            <li><a href="tutorialMarcoIntegrado.html">iframe</a></li>
+            <li><a href="tutorialTransiciones.html">Transiciones</a></li>
+            <li><a href="tutorialColumnas.html">Columnas</a></li>
+            <li><a href="tutorialVideo.html">Video</a></li>
+            <li><a href="tutorialAudio.html">Audio</a></li>
+            <li><a href="tutorialTransparencias.html">Transparencias</a></li>
+            <li><a href="tutorialAnimacion.html">Animacion</a></li>
+            <li><a href="tutorialGraficosVectoriales.html">SVG</a></li>
+            <li><a href="tutorialContenidoEditable.html">Contenido editable</a></li>
+            <li><a href="tutorialAlmacenamiento.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Que son las imagenes SVG?</h2>
+        <article>
+            <p>SVG ofrece graficos vectoriales que no pierden calidad al escalar, ideal para iconos, diagramas y recursos didacticos en tutoriales tecnicos.</p>
+            <p>Estos atributos son rect (para crear rectangulos), circle (que no hace falta traducir), line, ellipse,
+                polygon, polyline (multi-lineas) y text.
+                Antes de tratarlos un poco mas extensamente, vamos a presentar algunos ejemplos rapidos y socorridos,
+                ... como no ... con banderas de algunos paises, ya que la mayoria son faciles de dibujar.
+                Varios ejemplos simples</p>
+        </article>
+        <article>
+            <h2>Varios ejemplos simples</h2>
+            <h5>Japon</h5>
+            <div id="tutorial_bandera_uno">
+                <svg width="150" height="90" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="150" height="90" fill="white" stroke="black" stroke-width="1" />
+                    <circle cx="75" cy="45" r="35" fill="red" />
+                </svg>
+            </div>
+            <div>
+                <pre>
+svg width="150" height="90" xmlns="http://www.w3.org/2000/svg"
+    rect width="150" height="90"  fill="white" stroke="black" stroke-width="1"/
+circle cx="75" cy="45" r="35" fill="red"/
+/svg;
+	        </pre>
+            </div>
+            <h5>Italia</h5>
+            <div id="tutorial_bandera_dos">
+                <svg width="150" height="90" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="150" height="90" fill="green" stroke="black" stroke-width="1" />
+                    <rect x="50" y="1" width="50" height="88" fill="white" />
+                    <rect x="100" y="1" width="49" height="88" fill="red" />
+                </svg>
+            </div>
+            <div>
+                <pre>
+svg width="150" height="90" xmlns="http://www.w3.org/2000/svg"
+  rect width="150" height="90"  fill="green" stroke="black" stroke-width="1"/
+  rect x="50" y="1" width="50" height="90" fill="white"/
+  rect x="100" y="1" width="50" height="90" fill="red"/
+/svg
+	</pre>
+            </div>
+            <h5>Alemania</h5>
+            <div id="tutorial_bandera_tres">
+                <svg width="150" height="90" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="150" height="90" fill="black" stroke="black" stroke-width="1" />
+                    <rect x="1" y="30" width="148" height="30" fill="red" />
+                    <rect x="1" y="60" width="148" height="29" fill="yellow" />
+                </svg>
+            </div>
+            <div>
+                <pre>
+svg width="150" height="90" xmlns="http://www.w3.org/2000/svg"
+  rect width="150" height="90"  fill="black" stroke="black" stroke-width="1"/
+  rect x="0" y="30" width="150" height="30" fill="red"/
+  rect x="0" y="60" width="150" height="30" fill="yellow"/
+/svg
+            </pre>
+            </div>
+            <h5>Catalunya</h5>
+            <div id="tutorial_bandera_seis">
+                <svg width="150" height="90" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="150" height="90" fill="yellow" stroke="black" stroke-width="1" />
+                    <rect x="0" y="10" width="150" height="10" fill="red" />
+                    <rect x="0" y="30" width="150" height="10" fill="red" />
+                    <rect x="0" y="50" width="150" height="10" fill="red" />
+                    <rect x="0" y="70" width="150" height="10" fill="red" />
+                </svg>
+            </div>
+            <pre>
+  rect width="150" height="90"  fill="yellow" stroke="black" stroke-width="1"/
+  rect x="0" y="10" width="150" height="10" fill="red"/
+  rect x="0" y="30" width="150" height="10" fill="red"/
+  rect x="0" y="50" width="150" height="10" fill="red"/
+  rect x="0" y="70" width="150" height="10" fill="red"/
+</pre>
+            </div>
+            <h5>Noruega</h5>
+            <div id="tutorial_contenido_bandera_cuatro">
+                <div id="tutorial_bandera_cuatro">
+                    <svg width="150" height="90" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="150" height="90" fill="red" stroke="black" stroke-width="1" />
+                        <rect x="38" y="1" width="30" height="88" fill="white" />
+                        <rect x="1" y="33" width="148" height="30" fill="white" />
+                        <rect x="45" y="0" width="16" height="90" fill="blue" />
+                        <rect x="0" y="40" width="150" height="16" fill="blue" />
+                    </svg>
+                </div>
+                <div>
+                    <pre>
+  rect width="150" height="90"  fill="red" stroke="black" stroke-width="1"
+  rect x="38" y="0" width="30" height="90" fill="white"
+  rect x="0" y="33" width="150" height="30" fill="white"
+  rect x="45" y="0" width="16" height="90" fill="blue"
+  rect x="0" y="40" width="150" height="16" fill="blue"
+</pre>
+                </div>
+
+                <h5>Suiza</h5>
+                <div id="tutorial_contenido_bandera_cinco">
+                    <div id="tutorial_bandera_cinco">
+                        <svg width="150" height="90" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="150" height="90" fill="red" stroke="black" stroke-width="1" />
+                            <rect x="40" y="33" width="70" height="24" fill="white" />
+                            <rect x="63" y="10" width="24" height="70" fill="white" />
+                        </svg>
+                    </div>
+                    <div id="tutorial_parrafo_bandera_cinco">
+                        <pre>
+svg width="150" height="90" xmlns="http://www.w3.org/2000/svg"
+rect width="150" height="90"  fill="red" stroke="black" stroke-width="1"/
+  rect x="40" y="33" width="70" height="24" fill="white"/
+  rect x="63" y="10" width="24" height="70" fill="white"/
+/svg
+</pre>
+                    </div>
+                </div>
+                <br>
+                Para el dibujo de estas banderas se han utilizado unicamente rectangulos (rect) y un circulo (circle)
+                dentro
+                de sus respectivos (svg), pero existen otros atributos muy interesantes.
+        </article>
+        <article>
+            <h2>La etiqueta < svg>
+            </h2>
+            <h4 id="tutorial_subtitulo">
+                < svg>
+            </h4>
+            <p>SVG ofrece graficos vectoriales que no pierden calidad al escalar, ideal para iconos, diagramas y recursos didacticos en tutoriales tecnicos.</p>
+            <div id="tutorial_bloque_codigo">
+                < svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                    < /svg>
+            </div>
+            <p>En este caso se crea un "lienzo" de 300 pixeles de ancho por 200 pixeles de alto. Si dentro de estos 2
+                tags no se introduce ningun atributo no se dibuja nada.</p><br><br>
+
+            <h4 id="tutorial_subtitulo">rect</h4>
+            <p>Para la creacion de rectangulos y cuadrados tenemos el atributo rect, que tiene las siguientes
+                propiedades (las que no se utilicen se pueden omitir):</p>
+
+            <div id="tutorial_columnas_svg">
+                <li><b>x</b>: Coordenada horizontal desde donde se va a empezar a dibujar el rectangulo.</li>
+                <li><b>y</b>: Coordenada vertical desde donde se va a empezar a dibujar el rectangulo.</li>
+                <li><b>rx</b>: Suavidad de los bordes horizontales (el valor 0 equivale a esquinas puntiagudas "no
+                    redondeadas")</li>
+                <li><b>ry</b>: Suavidad de los bordes verticales (el valor 0 equivale a esquinas puntiagudas "no
+                    redondeadas")</li>
+                <li><b>width</b>: Anchura del rectangulo.</li>
+                <li><b>height</b>: Altura del rectangulo.</li>
+                <li><b>fill</b>: Color del relleno (en codigo hexadecimal o escribiendo directamente el nombre del
+                    color)</li>
+                <li><b>stroke</b>: Color de la linea que rodea al rectangulo.</li>
+                <li><b>stroke-width</b>: Grosor de la linea (en pixeles).</li>
+                <li><b>opacity</b>: Opacidad (0 es transparencia total y 1 opacidad total).</li>
+            </div>
+
+            <div id="tutorial_panel_ejemplo">
+                < rect x="0" y="0" rx="12" ry="12" width="60" heigh="60" fill="gold" stroke="green" stroke-width="1"
+                    opacity="0.8" />
+            </div>
+
+            <svg width="160" height="80" xmlns="http://www.w3.org/2000/svg">
+                <rect x="30" y="5" rx="12" ry="12" width="60" height="60" fill="gold" stroke="green" stroke-width="1"
+                    opacity="0.8" />
+            </svg>
+
+            <p>En este caso se trataria de un cuadrado de unas dimensiones de 60 pixeles de ancho por 60 pixeles de
+                alto, que empieza a dibujar en las coordenadas 0/0 (tomando como inicio la esquina superior izquierda
+                donde esta ubicado el svg), con unos angulos suaves y redondeados (12). Con un color oro (gold) de
+                relleno, un grosor de 1 pixel de color verde y todo con una transparencia del 80%.</p>
+            <br>
+
+            <h4 id="tutorial_subtitulo">circle</h4>
+            <p>Para la creacion de circulos (no elipses, para los que existe un atributo propio):</p>
+
+            <div id="tutorial_columnas_svg">
+                <li><b>cx</b>: Coordenada horizontal del centro del circulo.</li>
+                <li><b>cy</b>: Coordenada vertical del centro del circulo.</li>
+                <li><b>r</b>: Radio del circulo (es la mitad de su anchura o altura total).</li>
+                <li><b>fill</b>: Color del relleno.</li>
+                <li><b>stroke</b>: Color de la linea que rodea al circulo).</li>
+                <li><b>stroke-width</b>: Grosor de la linea (en pixeles).</li>
+                <li><b>opacity</b>: Opacidad (0 es transparencia total y 1 opacidad total).</li>
+            </div>
+
+            <div class="tutorial_contenedor_degradado">
+                <div class="tutorial_caja_degradado">
+                    <div id="tutorial_panel_ejemplo">
+                        < circle cx="100" cy="100" r="45" fill="olive" stroke="black" stroke-width="1" opacity="0.9" />
+                    </div>
+                </div>
+                <svg width="150" height="120" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="75" cy="55" r="45" fill="olive" stroke="black" stroke-width="1" opacity="0.9" />
+                </svg>
+            </div>
+
+            <p>Circulo con un radio de 45px (por lo tanto medira 90 pixeles de ancho y alto), ubicado el centro del
+                circulo en las coordenadas 100/100. Con un color 'oliva' de relleno, un grosor de 1 pixel de color negro
+                y todo con una opacidad del 90%.</p>
+
+            <h4 id="tutorial_subtitulo">ellipse</h4>
+            <p>Para la creacion de circulos (no elipses, para la que existe un atributo propio):</p>
+
+            <div id="tutorial_columnas_svg">
+                <li><b>cx</b>: Coordenada horizontal del centro de la elipse.</li>
+                <li><b>cy</b>: Coordenada vertical del centro de la elipse.</li>
+                <li><b>rx</b>: Radio horizontal de la elipse (la mitad de su anchura total).</li>
+                <li><b>ry</b>: Radio vertical de la elipse (la mitad de su altura total).</li>
+                <li><b>fill</b>: Color del relleno.</li>
+                <li><b>stroke</b>: Color de la linea que rodea a la elipse.</li>
+                <li><b>stroke-width</b>: Grosor de la linea.</li>
+                <li><b>opacity</b>: Opacidad (0 es transparencia total y 1 opacidad total).</li>
+            </div>
+
+            <div class="tutorial_contenedor_degradado">
+                <div class="tutorial_caja_degradado">
+                    <div id="tutorial_panel_ejemplo">
+                        < ellipse cx="100" cy="100" rx="50" ry="25" fill="purple" stroke="black" stroke-width="1" />
+                    </div>
+                </div>
+                <svg width="150" height="80" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="83" cy="35" rx="50" ry="25" fill="purple" stroke="black" stroke-width="1" />
+                </svg>
+            </div>
+            <p>Ellipse con un radio horizontal de 50px (por lo tanto mediria 100 pixeles de ancho), y un radio vertical
+                de 25 (tendra una altura total de 50 pixeles) ubicado (el centro de la elipse) en las coordenadas
+                100/100. Con un color purpura de relleno y un grosor de 1 pixel de color negro (sin transparencia, ya
+                que se ha omitido -opacity-).</p>
+
+            <h4 id="tutorial_subtitulo">line</h4>
+            <p>Se puedan crear lineas rectas, pudiendo especificar el tipo de linea:</p>
+            <div id="tutorial_columnas_svg">
+                <li><b>x1</b>: Coordenada horizontal inicial desde donde se empezara a dibujar la linea.</li>
+                <li><b>x2</b>: Coordenada horizontal final hasta donde llegara la linea.</li>
+                <li><b>y1</b>: Coordenada vertical inicial desde donde se empezara a dibujar la linea.</li>
+                <li><b>y2</b>: Coordenada vertical final hasta donde se dibujara la linea.</li>
+                <li><b>stroke</b>: Color de la linea.</li>
+                <li><b>stroke-width</b>: Grosor de la linea.</li>
+                <li><b>stroke-dasharray</b>: Tipo de linea.</li>
+                <li><b>opacity</b>: Opacidad (0 es transparencia total y 1 opacidad total).</li>
+            </div>
+            <div id="tutorial_panel_ejemplo">
+                < line x1="0" y1="0" x2="260" y2="40" stroke="fuchsia" stroke-width="4" stroke-dasharray="18,7,9,20" />
+            </div>
+            <svg width="300" height="120" xmlns="http://www.w3.org/2000/svg">
+                <line x1="38" y1="10" x2="300" y2="50" stroke="fuchsia" stroke-width="4"
+                    stroke-dasharray="18,7, 9, 20" />
+                <line x1="38" y1="80" x2="84" y2="80" stroke="fuchsia" stroke-width="4"
+                    stroke-dasharray="18,7, 9, 20" />
+                <text x="40" y="93" style="font-size:12px">
+                    18
+                </text>
+                <text x="58" y="76" style="font-size:12px">
+                    7
+                </text>
+                <text x="64" y="93" style="font-size:12px">
+                    9
+                </text>
+                <text x="74" y="76" style="font-size:12px">
+                    20
+                </text>
+            </svg><br>
+            <p>Linea que va desde la posicion 0,0 (esquina superior izquierda definida por el svg) hasta 260 pixeles a
+                la derecha y 40 hacia abajo (osea, sera una linea diagonal) de un color fucsia de 4 pixeles de grosor y
+                con un tipo de linea discontinua.
+                Los 4 valores de stroke-dasharray (18,7, 9,29) indican (por parejas) la continuidad de la linea. Asi,
+                los dos primeros valores (18,7) indican, el primero, un tramo visible de una longitud de 18 pixeles,
+                seguido de un tramo de linea no visible de 7 pixeles. Seguidamente, los dos valores siguientes (9,20),
+                indican un tramo de 9 pixeles de linea visible, seguido de 20 pixeles de tramo no visible, repitiendo
+                dichos valores hasta el final de la longitud de la linea.</p>
+
+            <h4 id="tutorial_subtitulo">polyline</h4>
+            <p>Con mas potencia que line, con polyline es posible crear multiples lineas que normalmente forman figuras
+                con una forma abierta.</p>
+            <div id="tutorial_columnas_svg">
+                <li><b>points</b>: Coordenadas (en parejas) que describen la coordenada y vertical de cada punto.</li>
+                <li><b>fill</b>: Indica el color del relleno -si tiene- (si no se desea relleno, se indica -none-).</li>
+                <li><b>stroke</b>: Color de la linea.</li>
+                <li><b>stroke-width</b>: Grosor de la linea.</li>
+            </div>
+            <div id="tutorial_panel_ejemplo">
+                < polyline points="0,90, 10,90, 10,40, 40,10, 50,20, 50,10, 60,10, 60,30, 70,40, 70,90, 80,90"
+                    fill="none" stroke="black" stroke-width="3" />
+            </div>
+            <svg width="300" height="120" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="0,90, 10,90, 10,40, 40,10, 50,20, 50,10, 60,10, 60,30, 70,40, 70,90, 80,90"
+                    fill="none" stroke="black" stroke-width="3" transform="translate(30,0)" />;
+            </svg><br>
+            <p>Con estas 10 lineas se dibuja el contorno de una casa. Las lineas se describen por parejas, siendo los
+                valores del primer punto (0,90, coordenada situada en la esquina inferior izquierda del espacio definido
+                por el svg), que describe una linea que se extiende hasta las coordenadas descritas en el siguiente par
+                de valores (10,90). Es decir, la primera linea se extiende desde la coordenada (x=0/y=90) hasta la
+                coordenada (x=10/y=90).
+                Asi, estos primeros 4 valores dibujan una linea horizontal de 10 pixeles. Para todo este conjunto de
+                lineas se utiliza un color negro de 3 pixeles de grosor sin ningun tipo de relleno.</p>
+
+            <h4 id="tutorial_subtitulo">polygon</h4>
+            <p>Con mas potencia que line y muy parecido a polyline, con polygon es posible crear figuras de forma
+                normalmente cerradas, a diferencia que polyne, que esta mas orientado a figuras abiertas.</p>
+
+            <div id="tutorial_columnas_svg">
+                <li><b>points</b>: Coordenadas (en parejas) que describen la coordenada y vertical de cada punto.</li>
+                <li><b>fill</b>: Indica el color del relleno (si no se desea, se indica -none-).</li>
+                <li><b>fill-opacity</b>: Indica si tiene relleno (si no se desea relleno, se indica -none-).</li>
+                <li><b>stroke</b>: Color de la linea (si no se desea lineas, se indica -none-)</li>
+                <li><b>stroke-width</b>: Grosor de la linea.</li>
+                <li><b>stroke-opacity</b>: Opacidad de la linea (de 0 a 1).</li>
+            </div><br>
+            <div id="tutorial_panel_ejemplo">
+                < polygon points="50,0, 82,100, 0,37, 100,37, 20,100, 50,0" fill="gold" stroke="black"
+                    stroke-width="3" /><br>
+                < polygon points="50,0, 62,37, 100,37, 70,61, 82,100,  50,75,  20,100,  31,61, 0,37,  39,37,  50,0"
+                    fill="gold" stroke="black" stroke-width="3" />
+            </div>
+            <svg width="350" height="110" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,0, 82,100, 0,37, 100,37, 20,100, 50,0" fill="gold" stroke="black" stroke-width="3"
+                    transform="translate(30,0)" />;
+                <polygon points="50,0, 62,37, 100,37, 70,61, 82,100, 50,75, 20,100, 31,61, 0,37, 39,37, 50,0"
+                    fill="gold" stroke="black" stroke-width="3" transform="translate(180,0)" />;
+            </svg><br>
+            <p>Con estos dos poligonos se representan dos estrellas basadas en una misma forma. El primer poligono
+                compuesto por 5 lineas y el segundo, algo mas elaborado, compuesto por 10 lineas.</p>
+            <p>Las lineas se describen y dibujan siempre por parejas. Por ejemplo, en la primera estrella, los valores
+                del primer punto (50,0: situado en la esquina superior central) describe una linea que va hasta las
+                coordenadas descritas en el siguiente par de valores (82,100). Asi, estos primeros 4 valores dibujan una
+                linea en diagonal que va desde el punto superior de la estrella hasta su extremo inferior derecho. Ambos
+                poligonos tienen definido un relleno (fill) y una linea con color (negro) y grosor (3), por lo que
+                podemos ver que, aunque comparten la misma forma, ambas estrellas son bastante diferentes en cuanto a su
+                construccion.</p><br>
+            <p>Sin embargo, si en ambos poligonos sustituimos stroke="black" por stroke="none", el resultado visual de
+                ambos poligonos es identico:</p>
+            <svg width="350" height="110" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,0, 82,100, 0,37, 100,37, 20,100, 50,0" fill="gold" stroke="none" stroke-width="3"
+                    transform="translate(30,0)" />;
+                <polygon points="50,0, 62,37, 100,37, 70,61, 82,100, 50,75, 20,100, 31,61, 0,37, 39,37, 50,0"
+                    fill="gold" stroke="none" stroke-width="3" transform="translate(180,0)" />;
+            </svg>
+
+            <br>
+            <h4 id="tutorial_subtitulo">text</h4>
+            <p>Permite "dibujar" texto (vectorial), pudiendo personalizar la rotacion de cada una de las letras que
+                componen dicho texto.</p>
+            <div id="tutorial_columnas_svg">
+                <li><b>font-family</b>: Indica el tipo de letra a utilizar (especificado en el codigo CSS).</li>
+                <li><b>font-size</b>: Tamano del texto.</li>
+                <li><b>font-weight</b>: Estilo del texto (bold..).</li>
+                <li><b>fill</b>: Color del relleno del texto.</li>
+                <li><b>stroke</b>: Color de las lineas (si no se desean lineas, se indica -none-)</li>
+                <li><b>stroke-width</b>: Grosor de las lineas que dibujan el texto.</li>
+                <li><b>x</b>: Coordenada horizontal del texto.</li>
+                <li><b>y</b>: Coordenada vertical del texto.</li>
+                <li><b>dx</b>: Coordenada horizontal de inicio tomando como punto de partidas el valor x.</li>
+                <li><b>dy</b>: Coordenada vertical de inicio tomando como punto de partidas el valor y.</li>
+                <li><b>rotate</b>: Grados de rotacion del texto (pudiendo especificar la rotacion de cada una de las
+                    letras).</li>
+            </div>
+            <div class="tutorial_contenedor_degradado">
+                <div class="tutorial_caja_degradado">
+                    <div id="tutorial_panel_ejemplo">
+                        < text x="30" y="35" rotate="17 0 -9 11 10 -3" fill="red" stroke="white" stroke-width="2">
+                            Javier
+                            < /text>
+                    </div>
+                </div>
+                <svg width="350" height="64" xmlns="http://www.w3.org/2000/svg">
+                    <text x="30" y="33" font-family="font1_negrita" font-size="50px" rotate="17 0 -9 11 10 -3"
+                        fill="red" stroke="white" stroke-width="2">
+                        Javier
+                    </text>
+                </svg>
+            </div>
+            <p>Con este codigo se crea un imagen vectorial de un texto en el que se han definido una serie de parametros
+                comunes para todo el texto (tipo de letra, tamano, colores y posicion), al mismo tiempo que se definido
+                un grado de rotacion diferente para cada una de las letras que forman el texto (siendo 17 para la letra
+                "J", 0 grados para la "a" o bien -9, que realiza una rotacion de la letra "v" hacia la izquierda.</p>
+        </article>
+    </section>
+<footer>
+        <div><br>&#169; Saul Stiven Garcia Olivar (2026)<br>
+            <img src="imagenes/email.png" align="center"> saulgarcia@unimayor.edu.co</a>
+        </div>
+        Tutorial HTML5 + CSS / Desarrollo Software /Desarrollo de Aplicaciones Web</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

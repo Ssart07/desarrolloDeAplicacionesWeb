@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="css/estiloSsart.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS Transparencia</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="tutorialIndice.html">Inicio</a></li>
+            <li><a href="tutorialBordes.html">Bordes</a></li>
+            <li><a href="tutorialSombras.html">Sombras</a></li>
+            <li><a href="tutorialImagenes.html">Imagenes</a></li>
+            <li><a href="tutorialPosicionamiento.html">Posicion</a></li>
+            <li><a href="tutorialTransformacion.html">Transformacion</a></li>
+            <li><a href="tutorialFormularios.html">Formularios</a></li>
+            <li><a href="tutorialMarcoIntegrado.html">iframe</a></li>
+            <li><a href="tutorialTransiciones.html">Transiciones</a></li>
+            <li><a href="tutorialColumnas.html">Columnas</a></li>
+            <li><a href="tutorialVideo.html">Video</a></li>
+            <li><a href="tutorialAudio.html">Audio</a></li>
+            <li><a href="tutorialTransparencias.html">Transparencias</a></li>
+            <li><a href="tutorialAnimacion.html">Animacion</a></li>
+            <li><a href="tutorialGraficosVectoriales.html">SVG</a></li>
+            <li><a href="tutorialContenidoEditable.html">Contenido editable</a></li>
+            <li><a href="tutorialAlmacenamiento.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Colores predefinidos</h2>
+        <article>
+            <p>La transparencia, ya sea con opacity o con colores rgba, ayuda a crear capas visuales y resaltar contenido con un estilo mas moderno y legible.</p>
+            <div id="tutorial_bloque_codigo">
+                color=tomato;<br>
+                color=#FF6347
+            </div>
+        </article>
+        <article>
+            <h2>Transparencias</h2>
+            <p>La transparencia, ya sea con opacity o con colores rgba, ayuda a crear capas visuales y resaltar contenido con un estilo mas moderno y legible.</p>
+            <div id="tutorial_bloque_codigo">
+                background-color:rgba(255,0,0, 0.4);
+            </div><br>
+            <div id="tutorial_cuadro_transparente"></div>
+            <div id="tutorial_cuadro_solido"></div>
+            <p>El primer cuadro representa un color rojo con una opacidad del 40% (0.4), mientras que el segundo cuadro
+                se ha aA±adido para poder ver la diferencia con el color rojo sin transparencia.
+            </p><br>
+        </article>
+        <article>
+            <h2>Degradados</h2>
+            <p>La transparencia, ya sea con opacity o con colores rgba, ayuda a crear capas visuales y resaltar contenido con un estilo mas moderno y legible.</p>
+            <p>Vamos a dejar en el bA¡ul del A³lvido el infernal cA³digo de degradado que utilizaban las versiones de</p>
+            <ul>
+                <li>Firefox 3.6+</li>
+                <li>Chrome +10</li>
+                <li>Safari +5.1</li>
+                <li>Opera 11.10+ (SA³lo degradados lineales)</li>
+                <li>(e increiblemente en) Internet Explorer 10+</li>
+            </ul>
+            <h4 id="tutorial_subtitulo">Degradados lineales</h4>
+            <p>Primero definimos dA³nde empieza el degradado (top, bottom, right, left) o bien indicando un A¡ngulo
+                (45deg), seguido de los colores que compondrA¡n el degradado y de manera opcional se puede indicar cuA¡nto
+                durarA¡ cada color (en porcentaje).</p>
+            <div id="tutorial_bloque_codigo">
+                background:linear-gradient(dA³nde empieza, color1, 40%, color2, 60%);
+            </div><br>
+            <h4 id="tutorial_subtitulo">Algunos ejemplos:</h4>
+            <div class="tutorial_contenedor_degradado">
+                <div id="tutorial_degradado_lineal_principal"></div>
+                <div class="tutorial_caja_degradado">
+                    <div id="tutorial_bloque_codigo">
+                        background:linear-gradient(top, red, gold);
+                    </div>
+                    <p>Degradado lineal (linear-gradient) que empieza en la parte superior del < div> (top) y que va
+                            desde el
+                            color red hasta el color gold.</p>
+                </div>
+            </div><br>
+            <div id="tutorial_bloque_codigo">
+                background:linear-gradient(30deg, crimson,sienna, royalblue, indianred, purple);
+            </div><br>
+            <div class="tutorial_contenedor_degradado">
+                <div id="tutorial_degradado_lineal_secundario"></div>
+                <div class="tutorial_caja_degradado">
+                    <p>Degradado lineal (linear-gradient) que se inicia en la esquina superior izquierda con una
+                        inclinaciA³n de 30 grados (30deg) y que en toda su extensiA³n pasa por los colores crimson,
+                        sienna, royalblue, indianred y purple.</p>
+                </div>
+            </div><br>
+            <div id="tutorial_bloque_codigo">
+                background:linear-gradient(top, black 10%, orangered 75%, yellow);
+            </div>
+            <br>
+            <div class="tutorial_contenedor_degradado">
+                <div id="tutorial_degradado_lineal_terciario"></div>
+                <div class="tutorial_caja_degradado">
+                    <p>Degradado lineal (linear-gradient) que empieza en la parte superior del
+                        < div> (top) y que define 3 colores indicando sus dimensiones. AsA­, mientras el negro ocupa el
+                            10% del espacio, el orangered ocupa el 65% (del 10 al 75%), quedando el 25% restante para el
+                            yellow).
+                    </p>
+                </div>
+            </div><br>
+
+            <h4 id="tutorial_subtitulo">Degradados radiales</h4>
+            <p>Primero definimos dA³nde estA¡ el centro del degradado a travA©s de una posiciA³n horizontal y luego una
+                vertical (utilizando center, top, bottom, right, left o unas coordenadas en pA­xeles 125px 200px).
+                Seguidamente se define la forma (circle o ellipse). DespuA©s opcionalmente se puede definir cA³mo se
+                expandirA¡ el degradado. Por Aºltimo se definen los colores que compondrA¡n el degradado y de manera
+                opcional se puede indicar cuA¡nto durarA¡ cada color (en porcentaje).</p>
+
+            <div id="tutorial_panel_ejemplo">
+                background:radial-gradient(dA³nde estA¡ el centro, circle/ellipse expansiA³n del degradado, color1, 40%,
+                color2, 60%);
+            </div><br>
+            <p>Los diferentes valores referentes a la expansiA³n del degradado son:
+            </p><br>
+
+            <div class="tutorial_contenedor_degradado">
+                <div class="tutorial_caja_degradado">
+                    <h4 id="tutorial_subtitulo">closest-side: </h4>
+                    <p>El degradado se expande hasta que su forma exterior se encuentra con el lado de la caja que estA¡
+                        mA¡s cerca del centro del degradado.
+                    </p><br>
+                    <p>En este ejemplo vemos como su forma exterior (cA­rculo amarillo) crece desde su centro hasta el
+                        lado de la caja que estA¡ mA¡s cercano al centro del degradado, que es el lado de arriba.</p>
+                </div>
+                <div id="tutorial_degradado_radial_lado_cercano"></div>
+            </div><br>
+
+            <div class="tutorial_contenedor_degradado">
+                <div class="tutorial_caja_degradado">
+                    <h4 id="tutorial_subtitulo">farthest-side:</h4>
+                    <p>El degradado se expande hasta que su forma exterior se encuentra con el lado de la caja que estA¡
+                        mA¡s lejos del centro del degradado.
+                    </p><br>
+                    <p>En este ejemplo vemos como su forma exterior (cA­rculo amarillo) crece desde su centro hasta que
+                        se encuentra con el lado mA¡s alejado del centro del degradado, que en este caso es el lado
+                        derecho.</p>
+                </div>
+                <div id="tutorial_degradado_radial_lado_lejano"></div>
+            </div><br>
+
+            <div class="tutorial_contenedor_degradado">
+                <div class="tutorial_caja_degradado">
+                    <h4 id="tutorial_subtitulo">closest-corner:</h4>
+                    <p>El degradado se expande hasta que su forma exterior se encuentra con la esquina de la caja que se
+                        encuentra mA¡s cerca al centro del degradado.
+                    </p><br>
+                    <p>En este ejemplo vemos como la forma exterior (cA­rculo amarillo) crece desde el centro hasta
+                        encontrarse con la esquina mA¡s cercana al centro del degradado, que en este caso es la esquina
+                        superior izquierda de la caja.</p>
+                </div>
+                <div id="tutorial_degradado_radial_esquina_cercana"></div>
+            </div><br>
+
+            <div class="tutorial_contenedor_degradado">
+                <div class="tutorial_caja_degradado">
+                    <h4 id="tutorial_subtitulo">farthest-corner:</h4>
+                    <p>El degradado se extiende hasta que su forma exterior se encuentra con la esquina de la caja que
+                        se encuentra mA¡s lejos del centro del degradado.
+                    </p><br>
+                    <p>En este ejemplo podemos ver como su forma exterior (el cA­rculo amarillo) crece desde el centro
+                        del degradado hasta encontrarse con la esquina mA¡s alejada de su centro, que en este caso es la
+                        esquina inferior derecha de la caja.</p>
+                </div>
+                <div id="tutorial_degradado_radial_esquina_lejana"></div>
+            </div>
+
+            <h4 id="tutorial_subtitulo">Algunos ejemplos</h4>
+            <br>
+            <div id="tutorial_bloque_codigo">
+                background:radial-gradient(center center, circle, black, #1162ac);
+            </div>
+            <br>
+            <div class="tutorial_contenedor_degradado">
+                <div id="tutorial_degradado_radial_principal"></div>
+                <div class="tutorial_caja_degradado">
+                    <p>Degradado radial (radial-gradient) que empieza en el centro del < div> (center center), que tiene
+                            una forma de cA­rculo (circle) y que va del color negro hasta un color azul con cA³digo
+                            hexadecimal #1162ac.
+                    </p>
+                </div>
+            </div><br>
+
+            <div id="tutorial_bloque_codigo">
+                background:radial-gradient(200px top, ellipse, white, #1162ac, black);
+            </div>
+            <br>
+            <div class="tutorial_contenedor_degradado">
+                <div id="tutorial_degradado_radial_secundario"></div>
+                <div class="tutorial_caja_degradado">
+                    <p>Degradado radial (radial-gradient) que empieza horizontalmente a 200px de la esquina superior
+                        izquierda y verticalmente en la parte superior (top) y que con forma elA­ptica (ellipse) va del
+                        color white hasta el black, pasando -por partes iguales- por el azul con cA³digo de color
+                        #1162ac.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div id="tutorial_bloque_codigo">
+                background:radial-gradient(center center, ellipse, white 25%, peru 66%, black 96%);
+            </div>
+            <br>
+            <div class="tutorial_contenedor_degradado">
+                <div id="tutorial_degradado_radial_terciario"></div>
+                <div class="tutorial_caja_degradado">
+                    <p>Degradado radial (radial-gradient) que empieza en el centro (center center) y que define las
+                        dimensiones elA­pticas de los colores que se van a utilizar. White en un 25%, peru en un 41% (del
+                        25 al 66%) y black en un 30% (del 66 al 96%), ocupando tambiA©n el 4% restante al no indicarse
+                        mA¡s colores.
+
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article>
+            <h2>Compatibilidad con navegadores</h2>
+            <p>La transparencia, ya sea con opacity o con colores rgba, ayuda a crear capas visuales y resaltar contenido con un estilo mas moderno y legible.</p>
+            <div id="tutorial_bloque_codigo">
+                <pre>
+                background:linear-gradient(top, red, gold);
+                background:-webkit-linear-gradient(top, red, gold);
+                background:-moz-linear-gradient(top, red, gold);
+                background:-o-linear-gradient(top, red, gold);
+                background:-ms-linear-gradient(top, red, gold);
+                    </pre>
+            </div>
+        </article>
+    </section>
+<footer>
+        <div><br>&#169; Saul Stiven Garcia Olivar (2026)<br>
+            <img src="imagenes/email.png" align="center"> saulgarcia@unimayor.edu.co</a>
+        </div>
+        Tutorial HTML5 + CSS / Desarrollo Software /Desarrollo de Aplicaciones Web</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

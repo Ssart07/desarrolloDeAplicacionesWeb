@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="css/estiloSsart.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS Sombras</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="tutorialIndice.html">Inicio</a></li>
+            <li><a href="tutorialBordes.html">Bordes</a></li>
+            <li><a href="tutorialSombras.html">Sombras</a></li>
+            <li><a href="tutorialImagenes.html">Imagenes</a></li>
+            <li><a href="tutorialPosicionamiento.html">Posicion</a></li>
+            <li><a href="tutorialTransformacion.html">Transformacion</a></li>
+            <li><a href="tutorialFormularios.html">Formularios</a></li>
+            <li><a href="tutorialMarcoIntegrado.html">iframe</a></li>
+            <li><a href="tutorialTransiciones.html">Transiciones</a></li>
+            <li><a href="tutorialColumnas.html">Columnas</a></li>
+            <li><a href="tutorialVideo.html">Video</a></li>
+            <li><a href="tutorialAudio.html">Audio</a></li>
+            <li><a href="tutorialTransparencias.html">Transparencias</a></li>
+            <li><a href="tutorialAnimacion.html">Animacion</a></li>
+            <li><a href="tutorialGraficosVectoriales.html">SVG</a></li>
+            <li><a href="tutorialContenidoEditable.html">Contenido editable</a></li>
+            <li><a href="tutorialAlmacenamiento.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+       
+    <section>
+    <h2>Sombras de &lt;div&gt; (cajas)</h2>
+
+    <h3>Ejemplo</h3>
+    <div id="tutorial_sombra_externa">
+        Con HTML5 podemos crear de una manera sencilla tanto sombras para zonas del HTML (&lt;div&gt;, &lt;article&gt;, &lt;footer&gt;, &lt;header&gt;...),
+            como para textos. Aunque cada uno de estos tipos de sombra tiene su propia etiqueta, la
+            sintaxis sigue la misma logica.
+    </div>
+    <br>
+    <h3>Sombras internas</h3>
+    <p><div id="tutorial_sombra_interna">
+        Para crear sombras internas unicamente tenemos que anadir el valor "inset" al final de la propiedad "box-shadow".
+    </div></p>
+    <br>
+    <p>
+    <ul>
+        <li>(6px), indica el numero de pixeles que se desviara la sombra horizontalmente.</li>
+        <li>(20px), especifica el numero de pixeles que se movera la sombra verticalmente.</li>
+        <li>(10px), es la suavidad que tendra la sombra (a menor valor mas duro sera el borde de la sombra).</li>
+    </p>
+    </section>
+    <section>
+        <h2>creacion de 'halos' o 'resplandores'</h2>
+        <article>
+            <p>Las sombras en CSS pueden utilizarse para generar efectos de halo o resplandor alrededor de elementos, destacandolos visualmente. Este recurso es util para llamar la atencion sobre componentes importantes o crear estilos mas llamativos.</p>
+            <h3>Ejemplo</h3>
+            <div id="tutorial_efecto_halo">
+                <p>section{
+                    box-shadow: 0px 0px 30px blue;
+                    }</p>
+            </div>
+        </article>
+    </section>
+    <section>
+        <h2>Sombras en textos</h2>
+        <article>
+            <p>En los textos, las sombras permiten mejorar la legibilidad y anadir un toque visual distintivo. Dependiendo de su configuracion, pueden hacer que el contenido resalte o darle un efecto mas suave y elegante.</p>
+            <h3>Ejemplo</h3>
+            <p id="tutorial_sombra_texto">
+                Este es el texto que contiene el < div> con id="tutorial_apartado_texto"</p>
+        </article>
+    </section>
+    <section>
+        <h2>multiples sombras en el mismo elemento</h2>
+        <article>
+            <p>CSS permite aplicar varias sombras a un solo elemento, combinandolas para lograr efectos mas complejos. Esto facilita la creacion de disenos mas elaborados y personalizados sin necesidad de recursos adicionales.</p>
+            <h3>Ejemplo</h3>
+            <div id="tutorial_sombras_multiples">
+                <p>#tutorial_apartado_texto{
+                    box-shadow: 0px 0px 20px red inset, 0px 0px 25px blue;
+                    }
+            </div>
+            <p>La primera sombra (0px 0px 20px red inset) se posiciona directamente sobre el elemento, con un difuminado de 20 pixeles, color rojo y aplicada de forma interna. Por su parte, la segunda (0px 0px 25px blue) tambien se ubica sobre el elemento, con una extension de 25 pixeles y color azul; al no incluir la propiedad inset, se interpreta como una sombra externa.</p>
+        </article>
+    </section>
+<footer>
+        <div><br>&#169; Saul Stiven Garcia Olivar (2026)<br>
+            <img src="imagenes/email.png" align="center"> saulgarcia@unimayor.edu.co</a>
+        </div>
+        Tutorial HTML5 + CSS / Desarrollo Software /Desarrollo de Aplicaciones Web
+    </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

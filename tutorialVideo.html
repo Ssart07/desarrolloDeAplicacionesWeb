@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estiloSsart.css">
+
+    <title> Video </title>
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial video HTML5 CSS Video</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="tutorialIndice.html">Inicio</a></li>
+            <li><a href="tutorialBordes.html">Bordes</a></li>
+            <li><a href="tutorialSombras.html">Sombras</a></li>
+            <li><a href="tutorialImagenes.html">Imagenes</a></li>
+            <li><a href="tutorialPosicionamiento.html">Posicion</a></li>
+            <li><a href="tutorialTransformacion.html">Transformacion</a></li>
+            <li><a href="tutorialFormularios.html">Formularios</a></li>
+            <li><a href="tutorialMarcoIntegrado.html">iframe</a></li>
+            <li><a href="tutorialTransiciones.html">Transiciones</a></li>
+            <li><a href="tutorialColumnas.html">Columnas</a></li>
+            <li><a href="tutorialVideo.html">Video</a></li>
+            <li><a href="tutorialAudio.html">Audio</a></li>
+            <li><a href="tutorialTransparencias.html">Transparencias</a></li>
+            <li><a href="tutorialAnimacion.html">Animacion</a></li>
+            <li><a href="tutorialGraficosVectoriales.html">SVG</a></li>
+            <li><a href="tutorialContenidoEditable.html">Contenido editable</a></li>
+            <li><a href="tutorialAlmacenamiento.html">Storage</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Diferentes estandares de video</h2>
+        <article>
+            <p>El elemento video de HTML5 integra contenido multimedia de forma nativa, con controles, poster y soporte de formatos segun disponibilidad del navegador.</p>
+            <h4 id="tutorial_subtitulo">Formatos</h3>
+            <img src="formatos/foto.png" alt="">
+
+        </article>
+
+        <article>
+            <h2>Compatibilidad con navegadores</h2>
+            <p>El elemento video de HTML5 integra contenido multimedia de forma nativa, con controles, poster y soporte de formatos segun disponibilidad del navegador.</p><br>
+            <table>
+                <tr>
+                    <th></th>
+                    <th id="tutorial_encabezado_tabla">MP4</th>
+                    <th id="tutorial_encabezado_tabla">OGG</th>
+                    <th id="tutorial_encabezado_tabla">WebM</th>
+                </tr>
+                <tr>
+                    <th id="tutorial_encabezado_tabla">Firefox</th>
+                    <td>-</td>
+                    <td>+3.5</td>
+                    <td>+4.0</td>
+                </tr>
+                <tr>
+                    <th id="tutorial_encabezado_tabla">Chrome</th>
+                    <td>+3.0</td>
+                    <td>+3.0</td>
+                    <td>+3.0</td>
+                </tr>
+                <tr>
+                    <th id="tutorial_encabezado_tabla">Opera</th>
+                    <td>-</td>
+                    <td>+10.5</td>
+                    <td>+10.6</td>
+                </tr>
+                <tr>
+                    <th id="tutorial_encabezado_tabla">Safari</th>
+                    <td>+3.1</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <th id="tutorial_encabezado_tabla">IExplorer</th>
+                    <td>+IE9</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </article>
+
+        <article>
+            <h2>Video</h2>
+            <p>El elemento video de HTML5 integra contenido multimedia de forma nativa, con controles, poster y soporte de formatos segun disponibilidad del navegador.</p>
+
+            <div id="tutorial_panel_ejemplo">
+                <pre>
+                < video>
+                    < source src="video.ogv" type="video/ogg" />
+                < /video>
+                </pre>
+            </div>
+                <p>En el tag < video> es posible incorporar un gran numero de atributos que nos ayudan a poder controlar
+                    mejor el video, como son:
+            </p><br>
+            <p>
+            <h4 id="tutorial_subtitulo">Atributos</h4>
+            <ul>
+                <li><b>width:</b> Indica la anchura del video, expresada en pixeles (px) o en porcentaje (%)</li>
+                <li><b>height:</b> Indica la altura del video, expresada en pixeles (px) o en porcentaje (%)</li>
+                <li><b>controls:</b> Establece si tendra la barra de navegacion (play, stop, volumen...) o no</li>
+                <li><b>autoplay:</b> Indica si el video se inicia detenido o ya aparece por defecto reproduciendose</li>
+                <li><b>loop:</b> Establece si al acabar el video, este debe volver a empezar o no</li>
+                <li><b>muted:</b> Indica si el audio se reproduce o se reproduce sin audio</li>
+                <li><b>preload:</b> Indica si el video se empieza a cargar cuando el navegador carga la pagina html</li>
+                <li><b>poster:</b> Da la posibilidad de establecer una imagen (jpg, gif o png) como fotograma inicialdel
+                    video</li>
+            </ul>
+
+            <div id="tutorial_panel_ejemplo">
+                <pre>
+    < video width="800" height="600" controls autoplay loop poster="fotograma.png">
+        < source src="video.ogv" type="video/ogg"/>
+    < /video>
+                </pre>
+            </div>
+            <p>Si queremos que el video se pueda visualizar desde cualquier navegador (que soporte HTML5), tenemos que
+                anadir a este codigo mas posibilidades y por lo tanto tenemos que tener el video grabado en diferentes
+                formatos.</p><br>
+            <p>El codigo HTML completo quedaria asi:</p>
+            <div id="tutorial_panel_ejemplo">
+                <pre>
+    < video width="800" height="600" controls autoplay loop poster="fotograma.png">
+        < source src="video.ogv" type="video/ogg"/>
+        < source src="video.mp4" type="video/mp4"/>
+        < source src="video.webm" type="video/webm"/>
+        < p>Tu navegador no soporta HTML5< /p>
+    < /video>
+                </pre>
+        </article>
+        <article>
+            <h2>Ejemplo Practico</h2>
+            <p>El elemento video de HTML5 integra contenido multimedia de forma nativa, con controles, poster y soporte de formatos segun disponibilidad del navegador.</p>
+            <div id="tutorial_panel_ejemplo">
+                <pre>
+    < video width="800" height="600" controls autoplay loop poster="fotograma.png">
+        < source src="video.ogv" type="video/ogg"/>
+        < source src="video.mp4" type="video/mp4"/>
+        < source src="video.webm" type="video/webm"/>
+	  
+        < object width="800" height="600" data="video.flv">
+        < param name="movie" value="video.flv">
+        < embed src="video.flv" width="800" height="600">
+        < /object>
+
+        < p>Tu navegador no soporta HTML5< /p>
+    < /video>
+                </pre>
+            </div>
+
+            <p>En este ejemplo se han utilizado unicamente los atributos 'width', 'height', 'controls' y 'poster',
+                evitando utilizar la opcion 'autoplay' (ya que no nos interesa que el video se reproduzca
+                automaticamente al cargar la pagina).</p>
+            <video width="800" height="600" controls autoplay loop muted>
+                <source src="formatos/creep.mp4" type="video/mp4" />
+                Tu navegador no soporta el video
+            </video>
+            </p>
+        </article>
+    </section>
+<footer>
+        <div><br>&#169; Saul Stiven Garcia Olivar (2026)<br>
+            <img src="imagenes/email.png" align="center"> saulgarcia@unimayor.edu.co</a>
+        </div>
+        Tutorial HTML5 + CSS / Desarrollo Software /Desarrollo de Aplicaciones Web</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="css/estiloSsart.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS Columnas</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="tutorialIndice.html">Inicio</a></li>
+            <li><a href="tutorialBordes.html">Bordes</a></li>
+            <li><a href="tutorialSombras.html">Sombras</a></li>
+            <li><a href="tutorialImagenes.html">Imagenes</a></li>
+            <li><a href="tutorialPosicionamiento.html">Posicion</a></li>
+            <li><a href="tutorialTransformacion.html">Transformacion</a></li>
+            <li><a href="tutorialFormularios.html">Formularios</a></li>
+            <li><a href="tutorialMarcoIntegrado.html">iframe</a></li>
+            <li><a href="tutorialTransiciones.html">Transiciones</a></li>
+            <li><a href="tutorialColumnas.html">Columnas</a></li>
+            <li><a href="tutorialVideo.html">Video</a></li>
+            <li><a href="tutorialAudio.html">Audio</a></li>
+            <li><a href="tutorialTransparencias.html">Transparencias</a></li>
+            <li><a href="tutorialAnimacion.html">Animacion</a></li>
+            <li><a href="tutorialGraficosVectoriales.html">SVG</a></li>
+            <li><a href="tutorialContenidoEditable.html">Contenido editable</a></li>
+            <li><a href="tutorialAlmacenamiento.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Columnas</h2>
+        <article>
+            <p>El sistema de columnas en CSS reparte texto en bloques verticales para mejorar lectura en determinadas composiciones, permitiendo controlar separacion y estilo divisorio.</p>
+            <p>Para ello utilizamos el siguiente codigo CSS3:</p><br>
+            <div id="tutorial_bloque_codigo">
+                column-count:2;
+            </div>
+            <p>Con column-count definimos el numero de columnas en las que queremos dividir el texto.</p><br>
+            <div id="tutorial_bloque_codigo">
+                column-gap:10px;
+            </div>
+            <p>Con column-gap definimos el espacio (en pixeles) que existira como minimo entre las columnas.</p>
+            <br>
+            <div id="tutorial_bloque_codigo">
+                column-rule:4px dotted gray;
+            </div>
+            <p>Con column-rule definimos tres caracteristicas de las lineas de separacion: el grosor, el tipo de linea y
+                por ultimo el color de estas lineas de separacion.</p>
+        </article>
+    </section>
+    <section>
+        <h2>Ejemplo practico</h2>
+        <article>
+            <h4 id="tutorial_subtitulo">1. Escribimos el texto que ira en columnas</h4>
+            <p>El sistema de columnas en CSS reparte texto en bloques verticales para mejorar lectura en determinadas composiciones, permitiendo controlar separacion y estilo divisorio.</p>
+
+            <div id="tutorial_bloque_codigo">
+                < div id="tutorial_columnas_texto"><br>
+                    < li>Ataulfo< /li><br>
+                            < li>Sigerico< /li><br>
+                                    < li>Walia< /li><br>
+                                            < li>Teodoredo< /li><br>
+                                                    < li>Turismundo< /li><br>
+                                                            < li>Teodorico< /li><br>
+                                                                    < li>Eurico< /li><br>
+                                                                            < li>Alarico II</ li><br>
+                                                                            < li>Gesaleico< /li><br>
+                                                                                    < li>Amalarico< /li><br>
+                                                                                            < li>Teudis< /li><br>
+                                                                                                    < li>Teudiselo< /li>
+                                                                                                            <br>
+                                                                                                            < li>Agila I
+                                                                                                                < /li>
+                                                                                                                    <br>
+                                                                                                                    <
+                                                                                                                        li>
+                                                                                                                        Atanagildo
+                                                                                                                        <
+                                                                                                                            /li>
+                                                                                                                            <br>
+                                                                                                                            <
+                                                                                                                                li>
+                                                                                                                                Liuva
+                                                                                                                                <
+                                                                                                                                    /li>
+                                                                                                                                    <br>
+                                                                                                                                    <
+                                                                                                                                        li>
+                                                                                                                                        Leovigildo
+                                                                                                                                        <
+                                                                                                                                            /li>
+                                                                                                                                            <br>
+                                                                                                                                            <
+                                                                                                                                                /div>
+            </div>
+            <p>Hay que comentar que hemos eliminado la etiqueta < ul> y < /ul>
+                        (que agruparian los diferentes < li>) con el objetivo de que no se descuadren las columnas (ya
+                            que sino el primer dato quedaria vacio). Si se desea anadir estas etiquetas, el primer < ul>
+                                se deberia ubicar fuera del < div> (por ejemplo en la linea anterior).</p>
+        </article>
+        <article>
+            <h4 id="tutorial_subtitulo">2. Indicamos las caracteristicas de las columnas</h4>
+            <p>El sistema de columnas en CSS reparte texto en bloques verticales para mejorar lectura en determinadas composiciones, permitiendo controlar separacion y estilo divisorio.</p>
+            <p>El resultado de las columnas es el siguiente:</p>
+            <div id="tutorial_columnas_texto">
+                <li>Ataulfo</li>
+                <li>Sigerico</li>
+                <li>Walia</li>
+                <li>Teodoredo</li>
+                <li>Turismundo</li>
+                <li>Teodorico</li>
+                <li>Eurico</li>
+                <li>Alarico II</li>
+                <li>Gesaleico</li>
+                <li>Amalarico</li>
+                <li>Teudis</li>
+                <li>Teudiselo</li>
+                <li>Agila I</li>
+                <li>Atanagildo</li>
+                <li>Liuva</li>
+                <li>Leovigildo</li>
+            </div>
+            <p>Si queremos que no aparezcan las bolitas delante de cada termino podemos anadir al codigo CSS el atributo
+                list-style: none;:</p>
+            <div id="tutorial_bloque_codigo">
+                #tutorial_columnas_texto{<br>
+                column-count:4;<br>
+                column-gap:20px;<br>
+                column-rule:4px double black;<br>
+                list-style: none;<br>
+                }
+            </div>
+            <h3>Ejemplo</h3>
+            <div id="tutorial_columnas_lista">
+                <li>Ataulfo</li>
+                <li>Sigerico</li>
+                <li>Walia</li>
+                <li>Teodoredo</li>
+                <li>Turismundo</li>
+                <li>Teodorico</li>
+                <li>Eurico</li>
+                <li>Alarico II</li>
+                <li>Gesaleico</li>
+                <li>Amalarico</li>
+                <li>Teudis</li>
+                <li>Teudiselo</li>
+                <li>Agila I</li>
+                <li>Atanagildo</li>
+                <li>Liuva</li>
+                <li>Leovigildo</li>
+            </div>
+        </article>
+    </section>
+    <section>
+        <h2>Tipos de lineas</h2>
+        <article>
+            <p>El sistema de columnas en CSS reparte texto en bloques verticales para mejorar lectura en determinadas composiciones, permitiendo controlar separacion y estilo divisorio.</p>
+            <ul>
+                <li><b>none:</b> sin linea separadora.</li>
+                <li><b>solid:</b> linea solida.</li>
+                <li><b>dotted:</b> linea punteada.</li>
+                <li><b>dashed:</b> linea discontinua (segmentos cortos de linea).</li>
+                <li><b>double:</b> doble linea paralela.</li>
+                <li><b>groove:</b> linea en relieve 3D hacia adentro.</li>
+                <li><b>ridge:</b> linea en relieve 3D hacia afuera.</li>
+                <li><b>inset:</b> linea con el color en bajorelieve.</li>
+                <li><b>outset:</b> linea que simula el relieve.</li>
+            </ul>
+        </article>
+    </section>
+    <section>
+        <h2>Compatibilidad con todos los navegadores</h2>
+        <article>
+            <p>El sistema de columnas en CSS reparte texto en bloques verticales para mejorar lectura en determinadas composiciones, permitiendo controlar separacion y estilo divisorio.</p>
+                <ul>
+                    <li><b>-webkit-:</b> para integrar a los navegadores Chrome y Safari.</li>
+                    <li><b>-moz-:</b> que identifica a Firefox.</li>
+                    <li><b>-o-:</b> para contemplar tambien al navegador Opera.</li>
+                    <li><b>-ms-:</b> para contemplar a las versiones modernas de Internet Explorer.</li>
+                </ul>
+                <div id="tutorial_bloque_codigo">
+                    #tutorial_columnas_texto{<br>
+                    -webkit-column-count:4;<br>
+                    -webkit-column-gap:20px;<br>
+                    -webkit-column-rule:4px double black;<br>
+                    -moz-column-count:4;<br>
+                    -moz-column-gap:20px;<br>
+                    -moz-column-rule:4px double black;<br>
+                    -o-column-count:4;<br>
+                    -o-column-gap:20px;<br>
+                    -o-column-rule:4px double black;<br>
+                    column-count:4;<br>
+                    column-gap:20px;<br>
+                    column-rule:4px double black;<br>
+                    list-style: none;<br>
+                    }
+        </article>
+    </section>
+<footer>
+        <div><br>&#169; Saul Stiven Garcia Olivar (2026)<br>
+            <img src="imagenes/email.png" align="center"> saulgarcia@unimayor.edu.co</a>
+        </div>
+        Tutorial HTML5 + CSS / Desarrollo Software /Desarrollo de Aplicaciones Web</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

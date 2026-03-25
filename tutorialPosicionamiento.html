@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="css/estiloSsart.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS Posicion</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="tutorialIndice.html">Inicio</a></li>
+            <li><a href="tutorialBordes.html">Bordes</a></li>
+            <li><a href="tutorialSombras.html">Sombras</a></li>
+            <li><a href="tutorialImagenes.html">Imagenes</a></li>
+            <li><a href="tutorialPosicionamiento.html">Posicion</a></li>
+            <li><a href="tutorialTransformacion.html">Transformacion</a></li>
+            <li><a href="tutorialFormularios.html">Formularios</a></li>
+            <li><a href="tutorialMarcoIntegrado.html">iframe</a></li>
+            <li><a href="tutorialTransiciones.html">Transiciones</a></li>
+            <li><a href="tutorialColumnas.html">Columnas</a></li>
+            <li><a href="tutorialVideo.html">Video</a></li>
+            <li><a href="tutorialAudio.html">Audio</a></li>
+            <li><a href="tutorialTransparencias.html">Transparencias</a></li>
+            <li><a href="tutorialAnimacion.html">Animacion</a></li>
+            <li><a href="tutorialGraficosVectoriales.html">SVG</a></li>
+            <li><a href="tutorialContenidoEditable.html">Contenido editable</a></li>
+            <li><a href="tutorialAlmacenamiento.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Posicionamiento de las cajas</h2>
+        <article>
+            <p>El posicionamiento define la ubicacion exacta de los elementos en la interfaz. Entender static, relative, absolute y fixed es clave para construir layouts consistentes.</p>
+            <div class="tutorial_contenedor_principal">
+                <div id="tutorial_titulo_referencia">Relative:</div>
+                <div class="tutorial_caja_descriptiva">
+                    <p>Este es el tipo de posicionamiento por defecto.
+                        Las cajas o < divs> se posicionan siempre en relacion al resto de < divs>. Si se mueven o
+                                semodifica
+                                el tamano de las cajas anteriores, las cajas que hayan debajo se moveran.
+                                Con este posicionamiento NO es posible colocar una caja encima de otra.
+                    </p>
+                </div>
+            </div>
+            <div class="tutorial_contenedor_principal">
+                <div id="tutorial_titulo_referencia">Absolute:</div>
+                <div class="tutorial_caja_descriptiva">
+                    <p>Al indicar un posicionamiento absoluto es posible colocar una caja en una coordenada concreta sin
+                        importar el posicionamiento del resto de cajas.
+                        Es posible que una caja este encima de otra.
+                    </p>
+                    <h3>Ejemplo</h3>
+                    <p>El muneco que se encuntra en una esquina de esta caja, se coloca por encima de otras cajas,
+                        pero que al mover el scroll de la pagina se mueve como el resto de elementos.</p>
+                </div>
+                <img src="imagenes/body.png" alt="chincheta" width="50px" class="tutorial_posicion_absoluta">
+
+            </div>
+
+            <div class="tutorial_contenedor_principal">
+                <div id="tutorial_titulo_referencia">Fixed:</div>
+                <div class="tutorial_caja_descriptiva">
+                    <p>Tiene las mismas caracteristicas que el posicionamiento absoluto, pero con la diferencia de
+                        que al mover el scroll del navegador la caja con posicionamiento fijo NO se movera del lugar
+                        donde ha sido ubicada.</p>
+                    <h3>Ejemplo</h3>
+                    <p>Un ejemplo es la imagen ubicada en la parte superior derecha de la pantalla, que esta por encima
+                        del resto de elementos y se queda fija en la esquina superior derecha.
+                        Asi, aunque movamos la barra de scroll o hagamos mas pequena la ventana del navegador no se
+                        mueve de esa posicion.</p>
+                    <img src="imagenes/woot.png" alt="xd" width="70px" class="tutorial_posicion_fija">
+                </div>
+            </div>
+            <br>
+            <p>Se utilizara unicamente una de los tres valores que siguen:</p>
+                <div id="tutorial_ejemplo_posicion">
+                    #nombre_del_div{
+                    <br>position:relative;
+                    <br>position:absolute;
+                    <br>position:fixed;
+                    }
+                </div>
+                <br>
+                <p>Al definir el posicionamiento como absolute o como fixed es necesario 
+                    indicar la posicion o coordenada exacta en la que se desea ubicar la caja (o < div >).</p>
+                <p>Para ello podemos utilizar los siguientes valores:</p>
+                <ul>
+                    <li><b>top: </b>Especifica la coordenada horizontal, empezando a contar desde el extremo izquierdo.</li>
+                    <li><b>bottom: </b>Especifica la coordenada horizontal, empezando a contar desde el extremo derecho..</li>
+                    <li><b>left: </b> Especifica la coordenada vertical, empezando a contar desde el extremo superior.</li>
+                    <li><b>right: </b>Especifica la coordenada vertical, empezando a contar desde el extremo inferior.
+</li>
+                </ul>
+        </article>
+    </section>
+<footer>
+        <div><br>&#169; Saul Stiven Garcia Olivar (2026)<br>
+            <img src="imagenes/email.png" align="center"> saulgarcia@unimayor.edu.co</a>
+        </div>
+        Tutorial HTML5 + CSS / Desarrollo Software /Desarrollo de Aplicaciones Web
+        
+    </footer>
+</body>
+
+</html>
+
+
+
+
+
+
+

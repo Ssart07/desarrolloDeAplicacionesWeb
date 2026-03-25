@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+    <link rel="stylesheet" href="css/estiloSsart.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tutorial HTML5 CSS Contenido Editable</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="tutorialIndice.html">Inicio</a></li>
+            <li><a href="tutorialBordes.html">Bordes</a></li>
+            <li><a href="tutorialSombras.html">Sombras</a></li>
+            <li><a href="tutorialImagenes.html">Imagenes</a></li>
+            <li><a href="tutorialPosicionamiento.html">Posicion</a></li>
+            <li><a href="tutorialTransformacion.html">Transformacion</a></li>
+            <li><a href="tutorialFormularios.html">Formularios</a></li>
+            <li><a href="tutorialMarcoIntegrado.html">iframe</a></li>
+            <li><a href="tutorialTransiciones.html">Transiciones</a></li>
+            <li><a href="tutorialColumnas.html">Columnas</a></li>
+            <li><a href="tutorialVideo.html">Video</a></li>
+            <li><a href="tutorialAudio.html">Audio</a></li>
+            <li><a href="tutorialTransparencias.html">Transparencias</a></li>
+            <li><a href="tutorialAnimacion.html">Animacion</a></li>
+            <li><a href="tutorialGraficosVectoriales.html">SVG</a></li>
+            <li><a href="tutorialContenidoEditable.html">Contenido editable</a></li>
+            <li><a href="tutorialAlmacenamiento.html">Storage</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Ejemplo practico</h2>
+        <article>
+            <p>Con contenteditable se habilita edicion directa sobre un bloque HTML, recurso practico para demostraciones de interaccion y prototipos de escritura.</p>
+            <div id="tutorial_bloque_codigo">
+                < section id="tutorial_contenido_editable" contenteditable="true"><br>
+                    < h2>Escribe tu pedido:< /h2><br>
+                            < ul><br>
+                                < li>2 bolsas de patatas< /li><br>
+                                        < li>1 donut< /li><br>
+                                                < li>4 Kg. de boniatos< /li><br>
+                                                        < /ul><br>
+                                                            < /section>
+            </div>
+            <p>El resultado del codigo anterior (anadiendo algo de codigo CSS) es el siguiente:</p>
+            <section id="tutorial_contenido_editable" contenteditable="true">
+                <h4>Escribe tu pedido:</h4>
+                <ul>
+                    <li>2 bolsas de patatas</li>
+                    <li>1 donut</li>
+                    <li>4 Kg. de boniatos</li>
+                </ul>
+            </section>
+            <p>Haz clic en el cuadro superior y modifica, elimina, anade lineas de texto o modifica el titulo.
+                Si anades mas elementos de los que caben dentro de la lista aparecera un scroll vertical, que se produce
+                gracias a este codigo CSS:</p>
+            <div id="tutorial_bloque_codigo">
+                #tutorial_contenido_editable{<br>
+                overflow:auto;<br>
+                }
+            </div>
+        </article>
+    </section>
+    <section>
+        <h2>Pregunta del millon</h2>
+        <p>Despues de editar el contenido de un < div>, puedes obtener los cambios realizados por el usuario utilizando
+                JavaScript o jQuery. Por ejemplo, al
+            modificar el texto y pulsar un boton, el navegador puede capturar ese contenido y mostrarlo en una
+                ventana
+                de alerta.</p>
+        <button onclick="alert(document.getElementById('tutorial_contenido_editable').innerText)">
+            Leer el contenido
+        </button>
+        <p>El codigo de este boton es el siguiente, donde 'ejemplo' es el id del
+            < div> donde hemos escrito..
+        </p><br>
+        <div id="tutorial_bloque_codigo">
+            < button onclick=" alert ( document.getElementById('tutorial_ejemplo_posicion').innerText )"><br>
+                Leer el contenido
+                < /button>
+
+        </div>
+    </section>
+<footer>
+        <div><br>&#169; Saul Stiven Garcia Olivar (2026)<br>
+            <img src="imagenes/email.png" align="center"> saulgarcia@unimayor.edu.co</a>
+        </div>
+        Tutorial HTML5 + CSS / Desarrollo Software /Desarrollo de Aplicaciones Web</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
